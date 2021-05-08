@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+
+        .head nav{
+
+            background-color: white;
+            opacity: .95;
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            text-align: center;
+            top: 0;            
+        }
+
+        .head nav a{
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            padding: 20px 20px;
+        }
+
+
+        .banner{
+            height: 700px;
+            background-image: url(Images/banner01.jpg);
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: left;
+            align-content: center;
+        }
+
+        .content h1{
+            font-size: 100px;
+            font-weight: bold;
+            color: white;
+            margin: 25px 100px;
+        }
+
+        .content h2{
+            font-size: 30px;
+            color: white;
+            margin: 25px 100px;
+        }
+
+        .lifeconcept h3,
+        .socialconcept h3{
+            font-size: 50px;
+            font-weight: bold;
+            color: #1e1e1e;
+            text-align: center ;
+            margin: 50px auto 30px;
+        }
+
+        .serviceconcept h3{
+            font-size: 50px;
+            font-weight: bold;
+            color: #1e1e1e;            
+            text-align: center ;
+            margin: 50px auto 30px;
+        }
+
+        .lifeconcept p{
+            color: #616161;
+            text-align: center;
+            margin: auto auto 200px;
+        }
+
+        .socialconcept p{
+            color: #616161;
+            text-align: center;
+            margin: auto auto 50px;
+        }
+
+        .container_LifeOnLine{
+            width: 960px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container_social{
+            width: 960px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f6f7f8;
+            background-size: 100%;
+        }
+
+        .container_products{
+            width: 960px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f6f7f8;
+        }
+
+
+        
+        .life_content{
+            width: 480px;
+            border: 1px solid white;
+            margin: 20px auto;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .life_pic img{
+            width: 100%;
+        }
+
+        .life_content h4{
+            font-size: 25px;
+            font-weight: bold;
+            margin: 20px auto;
+        }
+        
+        .greenconcept {
+            font-size: 14px;
+            color: #07b53b;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .description p{
+            font-size: 14px;
+            font-weight: bold;
+            color: #777;
+            margin-bottom: 55px;
+        }    
+
+        .info{
+            display: inline;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .info img{
+            width: 20px;
+            position: relative;
+            top: 3px;
+        }
+
+        .info p{
+            font-size: 10px;
+            font-weight: bold;
+            color: #1e1e1e;
+            display: inline-block;
+
+        }
+
+        .social_content{
+            width: 320px;
+            border: 1px solid #f6f7f8;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        .social_content img{
+            width: 100%;
+        }
+
+        .social_content h4{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .s_description p{
+            font-size: 14px;
+            color: #616161;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .companyservice{
+            background-image: url(Images/Company_Service.png);
+            background-size: 100%;
+            height: 210px;
+        }
+
+        .companyservice h3{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            padding: 100px ;
+        }
+
+        .allproducts_menu{
+            width: 240px;          
+            border: 1px solid #f6f7f8;  
+            box-sizing: border-box;
+            position: sticky;
+            top: 40px;
+
+        }
+
+        .allproducts_menu a{
+            text-decoration: none;
+            color: rgba(30,30,30,.7);
+            font-size: 13px;
+            display: inline-block;
+            margin: 10px 50px;
+            padding: 10px;
+            border: 1px solid rgba(30,30,30,.7);
+            border-radius: 50px;
+        }
+
+        .items{
+            width: 230px;
+            height: 300px;
+            background-color: white;
+            border: 1px solid white;
+            margin: 0 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .blank{
+            width: 230px;
+            height: 300px;
+            background-color: #f6f7f8;
+            border: 1px solid #f6f7f8;
+            margin: 0 5px;
+            box-sizing: border-box;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="head">
+    <nav>
+        <a href="#">Life on LINE</a>
+        <a href="#">通訊軟體</a>
+        <a href="#">服務總覽</a>
+    </nav> 
+    </div>
+
+    <div class="banner">
+    <div class="content">
+    <h1>Life On LINE</h1>
+    <h2>LINE始終陪伴在你身旁。</h2>
+    </div>
+    </div>
+
+    <div class="lifeconcept">
+        <h3>Life On LINE</h3>
+        <p>超越通訊軟體，LINE為用戶建構全新的溝通型態與豐富的數位生活，成為用戶生活中不可或缺的平台。</p>
+    </div>
+
+    <div class="container_LifeOnLine">
+
+        <div class="life_content">
+        <img src="Images/LINE TODAY.png">
+        <h4>LINE TODAY</h4>
+        <div class="greenconcept">
+            <p>隨點隨看 生活快充</p>
+        </div>
+        <div class="description">
+        <p>最即時的新聞、影音、運動賽事和娛樂內容直播，讓你話題永不斷線，LINE TODAY陪伴您的每一天！</p>
+        </div>
+        <div class="info">
+            <img src="Images/info icon.png" >
+            <p>其他詳細資訊</p>
+        </div>
+        </div>
+
+        <div class="life_content">
+            <div class="life_pic">
+            <img src="Images/LINE TODAY pic.png">
+        </div>
+        </div>
+
+        <div class="life_content">
+            <div class="life_pic">
+            <img src="Images/LINE貼文串 Photo.png">
+        </div>
+        </div>
+
+
+        <div class="life_content">
+            <img src="Images/LINE貼文串 .png">
+            <h4>LINE貼文串</h4>
+            <div class="greenconcept">
+                <p>探索樂趣，分享生活</p>
+            </div>
+            <div class="description">
+            <p>在貼文串追蹤你的最愛．有感內容不錯過。
+                打造你的個人閱知頻道，探索生活大小事。
+                分享所見所聞，串連人際、啟發創意的無限可能！</p>
+            </div>
+            <div class="info">
+                <img src="Images/info icon.png">
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_content">
+            <img src="Images/LINE Pay.png" >
+            <h4>LINE Pay</h4>
+            <div class="greenconcept">
+                <p>付款、轉帳、生活繳費，輕鬆簡單又便利！</p>
+            </div>
+            <div class="description">
+            <p>付款簡單又便利，還能輕鬆轉帳給LINE好友，動動手指輕鬆完成日常生活各種帳單繳費， 免出門省時又省力。</p>
+            </div>
+            <div class="info">
+                <img src="Images/info icon.png">
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_content">
+            <div class="life_pic">
+            <img src="Images/LINE Pay pic.png">
+        </div>
+        </div>
+
+        <div class="life_content">
+            <div class="life_pic">
+            <img src="Images/LINE購物 pic.png">
+        </div>
+        </div>
+
+        <div class="life_content">
+            <img src="Images/LINE 購物.png">
+            <h4>LINE購物</h4>
+            <div class="greenconcept">
+                <p>先LINE購物再購物</p>
+            </div>
+            <div class="description">
+            <p>涵蓋各大購物、拍賣、精品、通路、旅遊、及票券商店，輕鬆貨比五百家，一站比價三千萬筆商品，再享LINE POINTS回饋賺不停！</p>
+            </div>
+            <div class="info">
+                <img src="Images/info icon.png">
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_content">
+            <img src="Images/LINETV.png">
+            <h4>LINE TV</h4>
+            <div class="greenconcept">
+                <p>共享追劇生活</p>
+            </div>
+            <div class="description">
+            <p>和朋友一起追劇，不錯過最新、最熱門、最潮的話題大劇，即時分享娛樂影音，展開精彩生活故事，LINE TV是您的追劇第一選擇！</p>
+            </div>
+            <div class="info">
+                <img src="Images/info icon.png">
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_content">
+            <div class="life_pic">
+            <img src="Images/LINETV photo2.png">
+        </div>
+        </div>
+    </div>
+
+    <div class="socialconcept">
+        <h3>通訊軟體</h3>
+        <p>一款全新型態的通訊軟體，讓您隨時隨地享受免費傳訊、免費通話等溝通樂趣。</p>
+    </div>
+
+    <div class="container_social">
+
+        <div class="social_content">
+            <img src="Images/Social App1.png">
+            <h4>聊天、語音通話&視訊通話</h4>
+            <div class="s_description">
+                <p>能夠和好友一對一或多人群組訊息聊天，或是進行語音、視訊通話。</p>
+            </div>
+        </div>
+
+        <div class="social_content">
+            <img src="Images/Social App2.png">
+                <h4>貼圖＆表情貼＆主題</h4>
+                <div class="s_description">
+                    <p>使用有趣的貼圖或表情貼豐富聊天，也能更換超讚的主題來表達自己。</p>
+            </div>
+        </div>
+
+        <div class="social_content">
+            <img src="Images/Social App3.png">
+                <h4>主頁</h4>
+                <div class="s_description">
+                    <p>可以快速連結 LINE 的各種服務，包含貼圖等多樣的內容資訊。</p>
+            </div>
+        </div>
+
+        <div class="social_content">
+            <img src="Images/Social App4.png">
+            <h4>社群</h4>
+            <div class="s_description">
+                <p>輕鬆分享共同興趣、開心聊出好麻吉。</p>
+            </div>
+        </div>
+
+        <div class="social_content">
+            <img src="Images/Social App5.png">
+                <h4>貼文串</h4>
+                <div class="s_description">
+                    <p>供你分享你的近況，或是瞭解好友的最新消息。透過「探索」功能，能找到更多你喜愛的內容。</p>
+            </div>
+        </div>
+
+        <div class="social_content">
+            <img src="Images/Social App6.png">
+                <h4>錢包</h4>
+                <div class="s_description">
+                    <p>使用「 LINE Pay 」可以進行安全方便的行動付款或轉帳，也能使用其他金融相關服務。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="companyservice">
+        <h3>企業服務</h3>
+    </div>
+
+    <div class="serviceconcept">
+        <h3>服務總覽</h3>
+    </div>
+
+
+    <div class="container_products">    
+        
+        <div class="allproducts_menu">
+        <ul>
+            <li><a href="#">All Product</a></li>
+            <li><a href="#">通訊</a></li>
+            <li><a href="#">娛樂</a></li>
+            <li><a href="#">生活</a></li>
+            <li><a href="#">購物</a></li>
+            <li><a href="#">工具</a></li>
+            <li><a href="#">金融</a></li>
+            <li><a href="#">企業商務</a></li>
+            <li><a href="#">新聞資訊</a></li>
+            <li><a href="#">相機</a></li>
+            <li><a href="#">Games</a></li>
+        </ul>
+    </div>
+
+        <div class="items">
+            <img src="Images/1 LINE Messenger.png">
+            <h4>LINE Messenger</h4>
+            <p>拉近人與人、人與資訊及應用服務間的距離的通訊軟體</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/2 LINE STORE.png">
+            <h4>LINE STORE</h4>
+            <p>可購買 LINE 貼圖、主題或遊戲中貨幣的官方線上商店</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/3 LINE貼文串.png">
+            <h4>LINE貼文串</h4>
+            <p>探索樂趣，分享生活</p>
+        </div>
+
+        <div class="blank"></div>
+
+        <div class="items">
+            <img src="Images/1 LINE Messenger.png">
+            <h4>LINE Messenger</h4>
+            <p>拉近人與人、人與資訊及應用服務間的距離的通訊軟體</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/2 LINE STORE.png">
+            <h4>LINE STORE</h4>
+            <p>可購買 LINE 貼圖、主題或遊戲中貨幣的官方線上商店</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/3 LINE貼文串.png">
+            <h4>LINE貼文串</h4>
+            <p>探索樂趣，分享生活</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/1 LINE Messenger.png">
+            <h4>LINE Messenger</h4>
+            <p>拉近人與人、人與資訊及應用服務間的距離的通訊軟體</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/2 LINE STORE.png">
+            <h4>LINE STORE</h4>
+            <p>可購買 LINE 貼圖、主題或遊戲中貨幣的官方線上商店</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/3 LINE貼文串.png">
+            <h4>LINE貼文串</h4>
+            <p>探索樂趣，分享生活</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/1 LINE Messenger.png">
+            <h4>LINE Messenger</h4>
+            <p>拉近人與人、人與資訊及應用服務間的距離的通訊軟體</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/2 LINE STORE.png">
+            <h4>LINE STORE</h4>
+            <p>可購買 LINE 貼圖、主題或遊戲中貨幣的官方線上商店</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/3 LINE貼文串.png">
+            <h4>LINE貼文串</h4>
+            <p>探索樂趣，分享生活</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/1 LINE Messenger.png">
+            <h4>LINE Messenger</h4>
+            <p>拉近人與人、人與資訊及應用服務間的距離的通訊軟體</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/2 LINE STORE.png">
+            <h4>LINE STORE</h4>
+            <p>可購買 LINE 貼圖、主題或遊戲中貨幣的官方線上商店</p>
+        </div>
+
+        <div class="items">
+            <img src="Images/3 LINE貼文串.png">
+            <h4>LINE貼文串</h4>
+            <p>探索樂趣，分享生活</p>
+        </div>
+
+        
+    </div>
+
+    
+</body>
+</html>
