@@ -18,7 +18,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5px;
 }
 
 .slogan1 {
@@ -101,7 +100,7 @@ img.icon {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin: 20px 5px;
+  margin: 20px 0px;
 }
 
 .description1 {
