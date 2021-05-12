@@ -1,6 +1,7 @@
 .all {
   width: 960px;
   overflow: hidden;
+  margin: auto;
 }
 
 .container1,
