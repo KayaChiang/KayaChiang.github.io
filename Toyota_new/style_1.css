@@ -1,3 +1,76 @@
+.head nav {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  position: fixed;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  gap: 90px;
+  padding: 20px;
+  z-index: 5;
+}
+
+.head nav a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.head nav a:nth-child(2)::after {
+  content: ' ';
+  display: block;
+  width: 140px;
+  border-bottom: 5px solid #c00505;
+  margin: 28px 0px;
+}
+
+.top {
+  width: 960px;
+  height: 100px;
+  margin: 150px 0px 30px;
+}
+
+.top h1 {
+  color: black;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.top h1::after {
+  content: ' ';
+  border-bottom: 4px solid black;
+  width: 30px;
+  display: block;
+  margin: 20px 470px;
+}
+
+.feature {
+  width: 960px;
+  height: 150px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.feature a {
+  text-decoration: none;
+  color: black;
+  border: 1px dotted grey;
+  padding: 10px 55px;
+  border-bottom: 3px solid #c00505;
+}
+
 .all {
   width: 960px;
   overflow: hidden;
