@@ -121,10 +121,13 @@
 }
 
 .container_LifeOnLine{
-    width: 960px;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .container_social{
@@ -147,41 +150,98 @@
 }
 
 .life_content{
-    width: 480px;
-    height: 500px;
-    border: 1px solid white;
-    margin: 20px auto;
-    padding: 0 20px 10px;
-    box-sizing: border-box;
-
-    img{
-        width: 100px;
-    }
-}
-
-.life_pic img{
     width: 100%;
-    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    padding: 0 50px;
+    position: relative;
 }
 
-.life_content h4{
+.life_content:nth-child(even)
+{
+    flex-direction: row-reverse;
+}
+
+.life_content:nth-child(odd) .life_text:first-child{
+    border-right: 1px dotted rgba(30,30,30,.3);
+}
+
+.life_content:nth-child(odd) img.life_pic{
+    display: inline-block;
+    position: absolute;
+    top: 100px;
+    right: 105px;
+    width: 50%;
+}
+
+.life_content:nth-child(even) img.life_pic{
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    left: 105px;    
+    width: 50%;
+}
+
+.life_content:nth-child(even) .life_text:first-child{
+    border-left: 1px dotted rgba(30,30,30,.3);
+}
+
+.life_content::before{
+    content: '';
+    border: 1px solid rgba(30,30,30,.3);
+    background-color: white;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.life_content:last-child::after{
+    content: '';
+    border: 1px solid rgba(30,30,30,.3);
+    background-color: white;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.life_text{
+    width: 50%;
+    padding: 150px 100px;
+
+    h4{
     font-size: 25px;
     font-weight: bold;
     margin: 20px auto;
-}
+    }
 
-.greenconcept {
-    font-size: 14px;
-    color: #07b53b;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
+    h5{
+        font-size: 14px;
+        color: #07b53b;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
 
-.description p{
+    p{
     font-size: 14px;
     font-weight: bold;
     color: #777;
     margin-bottom: 55px;
+    }
+}
+
+img.life{
+    width: 15%;
+    border-radius: 16%;
 }
 
 .info{
@@ -201,8 +261,12 @@
         font-weight: bold;
         color: #1e1e1e;
         display: inline-block;
+        margin: auto;
     }
 }
+
+
+
 
         /* .apple{
             display: inline-block;
@@ -231,7 +295,7 @@
         width: 960px;
         display: flex;
         flex-wrap: wrap;
-        margin: 20px 150px;
+        margin: 20px auto;
     }
 
         
@@ -298,7 +362,7 @@
         width: 960px;
         display: flex;
         flex-wrap: wrap;
-        margin: auto 150px;
+        margin: auto;
     }
 
     .all_items{
@@ -312,7 +376,6 @@
         width: 210px;
         height: 280px;
         background-color: white;
-        border: 1px solid white;
         margin: 15px 15px;
         padding: 20px;
         box-sizing: border-box;
@@ -340,16 +403,50 @@
     }
 } 
 
+.overlay{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        font-size: 12px;
+        width: 90px;
+        text-align: center;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5%;
+        padding: 10px;
+        margin: 5px;
+        i{
+            padding: 5px;
+        }
+    }
+}
+
+.items:hover .overlay{
+    display: flex;
+}
+
+
 .bottom_connect,
 footer{
     width: 960px;
     height: 100px;
-    display: inline-block;
+    display: flex;
     border: 1px solid white ;
     justify-content: flex-start;
-    padding: 30px 50px 10px 200px;
+    padding: 20px;
     box-sizing: border-box;
     position: relative;
+    margin: auto;
 }
 
 .bottom_connect li{
@@ -390,7 +487,7 @@ footer{
     width: 80px;
     position: absolute;
     top: -50px;
-    right: -100px;
+    right: 0px;
     }
 
     p{
@@ -398,13 +495,14 @@ footer{
         color: #616161;
         position: absolute;
         top: 40px;
-        right: -100px;
+        right: 0px;
     }
 }
 
 hr{
     width: 960px;
     color: #f6f7f8;
+    margin: auto;
 }
 
 footer{
@@ -434,11 +532,11 @@ footer li:nth-child(4)::after{
 img.sns_y{
     width: 25px;
     position: absolute;
-    right: -100px;
+    right: 30px;
 }
 
 img.sns_f{
     width: 20px;
     position: absolute;
-    right: -140px;
+    right: 0px;
 }
