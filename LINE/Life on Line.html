@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .all{
+            width: 100%;
+        }
+
+        .container_LifeOnLine{
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .life_content{
+            width: 100%;
+            margin: 0px auto;
+            display: flex;
+            padding: 0 50px;
+            position: relative;
+        }
+
+        .life_content:nth-child(even)
+        {
+            flex-direction: row-reverse;
+        }
+
+        .life_content:nth-child(odd) .life_text:first-child{
+            border-right: 1px dotted rgba(30,30,30,.3);
+        }
+
+        .life_content:nth-child(odd) img.life_pic{
+            display: inline-block;
+            position: absolute;
+            top: 100px;
+            right: 105px;
+            width: 50%;
+        }
+
+        .life_content:nth-child(even) img.life_pic{
+            display: inline-block;
+            position: absolute;
+            top: 50px;
+            left: 105px;    
+            width: 50%;
+        }
+
+        .life_content:nth-child(even) .life_text:first-child{
+            border-left: 1px dotted rgba(30,30,30,.3);
+        }
+
+        .life_content::before{
+            content: '';
+            border: 1px solid rgba(30,30,30,.3);
+            background-color: white;
+            border-radius: 50%;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .life_content:last-child::after{
+            content: '';
+            border: 1px solid rgba(30,30,30,.3);
+            background-color: white;
+            border-radius: 50%;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .life_text h4{
+        font-size: 25px;
+        font-weight: bold;
+        margin: 20px auto;
+        }
+
+        .life_text h5{
+        font-size: 14px;
+        color: #07b53b;
+        font-weight: bold;
+        margin-bottom: 12px;
+        }
+
+        .life_text p{
+        font-size: 14px;
+        font-weight: bold;
+        color: #777;
+        margin-bottom: 55px;
+        }
+
+        .life_text{
+            width: 50%;
+            padding: 150px 100px;
+        }
+
+
+        img.life{
+            width: 15%;
+            border-radius: 16%;
+        }
+
+        .info{
+            display: inline-block;
+            flex-wrap: wrap;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .info img{
+        width: 20px;
+        position: relative;
+        top: 3px;
+        }
+
+        .info p{
+        font-size: 10px;
+        font-weight: bold;
+        color: #1e1e1e;
+        display: inline-block;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="all">
+
+<div class="container_LifeOnLine">
+
+    <div class="life_content">
+
+        <div class="life_text">
+            <img src="Images/LINE TODAY.png"  class="life">
+            <h4>LINE TODAY</h4>
+            <h5>隨點隨看 生活快充</h5>
+            <p>最即時的新聞、影音、運動賽事和娛樂內容直播，讓你話題永不斷線，LINE TODAY陪伴您的每一天！</p>
+        
+            <div class="info">
+                <img src="Images/info icon.png" >
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_text">
+            <img src="Images/LINE TODAY pic.png" class="life_pic">
+        </div>      
+    </div>
+
+    <div class="life_content">
+
+        <div class="life_text">
+            <img src="Images/LINE貼文串 .png"  class="life">
+            <h4>LINE貼文串</h4>
+            <h5>探索樂趣，分享生活</h5>
+            <p>在貼文串追蹤你的最愛．有感內容不錯過。
+                打造你的個人閱知頻道，探索生活大小事。
+                分享所見所聞，串連人際、啟發創意的無限可能！</p>
+        
+            <div class="info">
+                <img src="Images/info icon.png" >
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_text">
+            <img src="Images/LINE貼文串 Photo.png" class="life_pic">
+        </div>      
+    </div>
+
+    <div class="life_content">
+
+        <div class="life_text">
+            <img src="Images/LINE Pay.png"  class="life">
+            <h4>LINE Pay</h4>
+            <h5>付款、轉帳、生活繳費，輕鬆簡單又便利！</h5>
+            <p>付款簡單又便利，還能輕鬆轉帳給LINE好友，動動手指輕鬆完成日常生活各種帳單繳費， 免出門省時又省力。</p>
+        
+            <div class="info">
+                <img src="Images/info icon.png" >
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_text">
+            <img src="Images/LINE Pay pic.png" class="life_pic">
+        </div>      
+    </div>
+
+    <div class="life_content">
+
+        <div class="life_text">
+            <img src="Images/LINE 購物.png"  class="life">
+            <h4>LINE購物</h4>
+            <h5>先LINE購物再購物</h5>
+            <p>涵蓋各大購物、拍賣、精品、通路、旅遊、及票券商店，輕鬆貨比五百家，一站比價三千萬筆商品，再享LINE POINTS回饋賺不停！</p>
+        
+            <div class="info">
+                <img src="Images/info icon.png" >
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_text">
+            <img src="Images/LINE購物 pic.png" class="life_pic">
+        </div>      
+    </div>
+
+    <div class="life_content">
+
+        <div class="life_text">
+            <img src="Images/LINETV.png"  class="life">
+            <h4>LINE TV</h4>
+            <h5>共享追劇生活</h5>
+            <p>和朋友一起追劇，不錯過最新、最熱門、最潮的話題大劇，即時分享娛樂影音，展開精彩生活故事，LINE TV是您的追劇第一選擇！</p>
+        
+            <div class="info">
+                <img src="Images/info icon.png" >
+                <p>其他詳細資訊</p>
+            </div>
+        </div>
+
+        <div class="life_text">
+            <img src="Images/LINETV _photo.png" class="life_pic">
+        </div>      
+    </div>
+
+
+</div>
+</div>    
+    
+</body>
+</html>
+
+            <!-- <div class="apple">
+                <img src="Images/App_store.png" >
+            </div>
+            <div class="google">
+                <img src="Images/google_play_icon.png">
+            </div> -->
