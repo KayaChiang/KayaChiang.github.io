@@ -54,6 +54,7 @@
 }
 
 .banner{
+    width: 100%;
     height: 700px;
     background-image: url(Images/banner01.jpg);
     background-size: 100%;
@@ -151,9 +152,9 @@
 
 .life_content{
     width: 100%;
-    margin: 0px auto;
+    // margin: 0px 100px;
     display: flex;
-    padding: 0 50px;
+    padding: 0 100px;
     position: relative;
 }
 
@@ -169,7 +170,7 @@
 .life_content:nth-child(odd) img.life_pic{
     display: inline-block;
     position: absolute;
-    top: 100px;
+    top: 200px;
     right: 105px;
     width: 50%;
 }
@@ -216,7 +217,7 @@
 
 .life_text{
     width: 50%;
-    padding: 150px 100px;
+    padding: 250px 100px;
 
     h4{
     font-size: 25px;
