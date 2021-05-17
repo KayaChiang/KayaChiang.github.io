@@ -104,29 +104,35 @@
         }
     }
 
+    .companyservice{
+        height: 60px;
+
+        h3{
+            padding: 20px ;
+        }
+    }
+
 
     .allproducts_menu{
-        display: flex;
-        width: 100%;          
-        height: none; 
-        border: 1px solid #f6f7f8;  
-        box-sizing: border-box;
-        position: relative;
-        top: 0px;
-        left: 60px;
+        display: none;
+        // width: 100%;          
+        // height: none; 
+        // border: 1px solid #f6f7f8;  
+        // box-sizing: border-box;
+        // position: relative;
+        // top: 0px;
+        // padding: 0px 60px;
 
-        ul li{
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            
-        }
+        // ul li{
+        //     list-style: none;
+        //     display: flex;
+        //     flex-direction: row;
+        // }
     }
 
     .all_items{
         width: 100%;
         position: relative;
-        left: 50px;
         
     }
 
@@ -139,7 +145,6 @@
         box-sizing: border-box;
         box-shadow: none;
         position: relative;
-        left: -50px;
         display: flex;
         border-bottom: 1px solid rgba(0,0,0,.05);
 
@@ -241,7 +246,7 @@
     footer li:nth-child(4)::after{
         position: relative;
         top: 40px;
-        left: -90px;
+        left: -80px;
     }
 
     img.sns_y{
