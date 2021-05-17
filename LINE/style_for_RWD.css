@@ -23,6 +23,7 @@
   }
   .content h1 {
     font-size: 30px;
+    margin: 25px 80px;
   }
   .content h2 {
     display: none;
@@ -38,7 +39,26 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 50px;
+    padding: 50px 50px;
+  }
+  .life_content:nth-child(odd) .life_text:first-child {
+    border-right: none;
+    border-left: 1px dotted rgba(30, 30, 30, 0.3);
+  }
+  .life_content:nth-child(odd) img.life_pic {
+    top: -30px;
+    right: 20px;
+    width: 100%;
+  }
+  .life_text {
+    width: 100%;
+    padding: 150px 5px;
+  }
+  .life_text p {
+    margin-bottom: 20px;
+  }
+  .info p {
+    margin: 1px;
   }
 }
 /*# sourceMappingURL=style_for_RWD.css.map */
