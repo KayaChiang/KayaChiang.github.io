@@ -39,7 +39,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 50px 50px;
+    padding: 50px 50px 0px;
   }
   .life_content:nth-child(odd) .life_text:first-child {
     border-right: none;
@@ -52,13 +52,104 @@
   }
   .life_text {
     width: 100%;
-    padding: 150px 5px;
+    padding: 10px 5px 0px;
+    margin: 70px 0px 0px;
   }
   .life_text p {
     margin-bottom: 20px;
   }
   .info p {
     margin: 1px;
+  }
+  .life_content:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .life_content:nth-child(even) img.life_pic {
+    display: inline-block;
+    position: absolute;
+    top: -200px;
+    left: 0px;
+    width: 100%;
+  }
+  .life_content::before {
+    display: none;
+  }
+  .life_content:last-child::after {
+    display: none;
+  }
+  .life_content:nth-child(even) {
+    width: 100%;
+    margin: 100px 0px;
+  }
+  .allproducts_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: none;
+    border: 1px solid #f6f7f8;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    top: 0px;
+    left: 60px;
+  }
+  .allproducts_menu ul li {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .all_items {
+    width: 100%;
+    position: relative;
+    left: 50px;
+  }
+  .items {
+    width: 100%;
+    height: 100px;
+    background-color: #f6f7f8;
+    margin: 15px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: relative;
+    left: -50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .items img {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+  }
+  .items h4 {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+    display: inline;
+    position: relative;
+    left: 20px;
+    width: 100%;
+  }
+  .items p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #616161;
+    padding: 5px 0;
+    position: absolute;
+    top: 40px;
+    left: 110px;
   }
 }
 /*# sourceMappingURL=style_for_RWD.css.map */
