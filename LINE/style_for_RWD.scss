@@ -150,25 +150,102 @@
     }
 
     .items{        
-    h4{
-        font-size: 16px;
-        font-weight: bold;
-        padding: 10px 0;
-        display: inline;
-        position: relative;
-        left: 20px;
+        h4{
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 0;
+            display: inline;
+            position: relative;
+            left: 20px;
+            width: 100%;
+        }
+        p{
+            font-size: 12px;
+            font-weight: bold;
+            color: #616161;
+            padding: 5px 0;
+            position: absolute;
+            top: 40px;
+            left: 110px;
+        }
+    }
+    
+    .bottom_connect,
+    footer{
         width: 100%;
+        height: 100px;
+        display: flex;
+        border: 1px solid white ;
+        justify-content: flex-start;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        margin: auto;
     }
-    p{
-        font-size: 12px;
-        font-weight: bold;
-        color: #616161;
-        padding: 5px 0;
-        position: absolute;
-        top: 40px;
-        left: 110px;
-    }
-} 
 
+    .bottom_connect li{
+        display: none;
+    }
+
+    .line_img{
+        display: none;
+    }
+    
+    .qr_code{ 
+        
+        img{
+            display: none;
+        }
+        p{
+            font-size: 8px;
+            color: #616161;
+            position: absolute;
+            top: 150px;
+            right: 220px;
+        }
+    }
+
+    hr{
+        display: none;
+    }
+    
+    footer{
+        position: relative;
+        
+    
+        li {
+            list-style-type: none;
+            display: inline-flex;
+            font-size: 10px;
+            position: relative;
+            top: -100px;
+
+    
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 10px;
+                position: relative;
+                top: 50px;
+                left: -100px;
+            }
+        }
+    }
+
+    footer li:nth-child(2)::after,
+    footer li:nth-child(3)::after,
+    footer li:nth-child(4)::after{
+        position: relative;
+        top: 50px;
+        left: -100px;
+    }
+
+    img.sns_y{
+        right: 330px;
+    }
+    
+    img.sns_f{
+        right: 300px;
+    }
 
 }
