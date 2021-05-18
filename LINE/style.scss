@@ -224,6 +224,15 @@
     margin: auto;
 }
 
+// .life_content .life_text:first-child{
+//     align-items: flex-end;
+// }
+
+.life_content:nth-child(odd) .life_text:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .life_text{
     width: 50%;
     padding: 0px 50px;
