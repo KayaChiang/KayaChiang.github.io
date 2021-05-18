@@ -150,18 +150,21 @@
     padding-bottom: 100px;
 }
 
-// .grid_line{
-//     width: 1px;
-//     border-left: 1px dashed #757475;
-//     position: absolute;
-// }
+.container_LifeOnLine::after{
+    content: ' ';    
+    width: 1px;
+    height: 100%;
+    border-right: 1px dashed #757475;
+    position: absolute;
+    right: 50%;
+    z-index: -1;
+}
+
 
 .life_content{
     width: 100%;
     margin: 100px 150px;
     display: flex;
-    // padding: 0 100px;
-    // position: relative;
     align-items: center;
     
 }
@@ -177,23 +180,15 @@
 
 .life_content:nth-child(odd) img.life_pic{
     display: inline-block;
-    // position: absolute;
-    // top: 200px;
-    // right: 105px;
     width: 130%;
 }
 
-// .life_content:nth-child(even)  .life_text:last-child{
-//     padding: 0px 120px 0px 0px;
-// }
 
 
 .life_content:nth-child(even) img.life_pic{
     display: inline-block;
-    // position: relative;
-    // left: -70px;
     width: 130%;
-    // padding: 0px 50px;
+
 }
 
 
