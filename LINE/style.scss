@@ -174,9 +174,9 @@
     flex-direction: row-reverse;
 }
 
-.life_content:nth-child(odd) .life_text:first-child{
-    border-right: 1px dotted rgba(30,30,30,.3);
-}
+// .life_content:nth-child(odd) .life_text:first-child{
+//     border-right: 1px dotted rgba(30,30,30,.3);
+// }
 
 .life_content:nth-child(odd) img.life_pic{
     display: inline-block;
@@ -192,9 +192,9 @@
 }
 
 
-.life_content:nth-child(even) .life_text:first-child{
-    border-left: 1px dotted rgba(30,30,30,.3);
-}
+// .life_content:nth-child(even) .life_text:first-child{
+//     border-left: 1px dotted rgba(30,30,30,.3);
+// }
 
 .life_content::before{
     content: '';

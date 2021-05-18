@@ -47,62 +47,63 @@
     }
 
     .life_content{
+        width: 100%;
+        margin: 50px 50px;
         flex-direction: column;
-        padding: 50px 50px 0px;
+        justify-content: center;
     }
 
-    .life_content:nth-child(odd) .life_text:first-child{
-        border-right: none;
-        border-left: 1px dotted rgba(30,30,30,.3);
-    }
-    
-    .life_content:nth-child(odd) img.life_pic{
-        top: -30px;
-        right:20px;
-        width: 100%;
-    }
+    .life_content:nth-child(even)
+{
+    flex-direction: column;
+}
 
-    .life_text{
-        width: 100%;
-        padding: 10px 5px 0px;
-        margin: 160px 0px 0px;
+.life_content:nth-child(odd) img.life_pic{
+    display: inline-block;
+    width: 150%;
+}
 
-        p{
-        margin-bottom: 20px;
-        }
-    }
+.life_content:nth-child(even) img.life_pic{
+    display: inline-block;
+    width: 150%;
+}
 
-    .info p{
-            margin: 1px;
-    }
+.life_content::before{
+    display: none;
+}
 
-    .life_content:nth-child(even){
-        flex-direction: row;
-    }
-    .life_content:nth-child(even) img.life_pic{
-        display: inline-block;
-        position: absolute;
-        top: -200px;
-        left: 0px;    
-        width: 100%;
-    }
-    
+.life_content:last-child::after{
+    display: none;
+}
 
-    .life_content::before{
-        display: none;
-        }
-    
-    .life_content:last-child::after{
-        display: none;
-        }
+.container_LifeOnLine::after{
+    left: 10%;
+}
 
-    .life_content:nth-child(even){
-        width: 100%;
-        margin: 100px 0px;
-        .life_text{
-            
-        }
+.life_content .life_text{
+    width: 100%;
+    padding: 0px 50px;
+    position: relative;
+    p{
+    margin-bottom: 5px;
     }
+}
+
+.life_content .life_text:last-child{
+    order: -1;
+}
+
+.life_content:nth-child(odd) .life_text:last-child{
+    position: relative;
+    top: 0px;
+    left: 20%;
+}
+
+.life_content:nth-child(even) .life_text:last-child{
+    position: relative;
+    top: -25px;
+    right: 20%;
+}
 
     .companyservice{
         height: 60px;
