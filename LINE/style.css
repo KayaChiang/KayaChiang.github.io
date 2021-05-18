@@ -391,6 +391,10 @@ img.life {
   border-radius: 50px;
 }
 
+.allproducts_menu_mobile {
+  display: none;
+}
+
 .whole_section {
   width: 960px;
   display: -webkit-box;
