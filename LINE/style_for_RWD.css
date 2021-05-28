@@ -76,17 +76,17 @@
   .life_content .life_text p {
     margin-bottom: 10px;
   }
-  .life_content .life_text:last-child {
+  .life_content .life_photo {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
   }
-  .life_content:nth-child(odd) .life_text:last-child {
+  .life_content:nth-child(odd) .life_photo {
     position: relative;
     top: 0px;
     left: 20%;
   }
-  .life_content:nth-child(even) .life_text:last-child {
+  .life_content:nth-child(even) .life_photo {
     position: relative;
     top: -25px;
     right: 20%;
@@ -143,7 +143,7 @@
   .items img {
     width: 70px;
     height: 70px;
-    padding: 5px;
+    padding: 0 5px 5px;
   }
   .items h4 {
     font-size: 16px;

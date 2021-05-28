@@ -89,17 +89,17 @@
     }
 }
 
-.life_content .life_text:last-child{
+.life_content .life_photo{
     order: -1;
 }
 
-.life_content:nth-child(odd) .life_text:last-child{
+.life_content:nth-child(odd) .life_photo{
     position: relative;
     top: 0px;
     left: 20%;
 }
 
-.life_content:nth-child(even) .life_text:last-child{
+.life_content:nth-child(even) .life_photo{
     position: relative;
     top: -25px;
     right: 20%;
@@ -157,7 +157,7 @@
         img{
             width: 70px;
             height: 70px;
-            padding: 5px;
+            padding:0 5px 5px;
         }
     }
 
