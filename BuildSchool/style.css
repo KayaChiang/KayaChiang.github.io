@@ -1,0 +1,492 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+} */
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: white;
+  vertical-align: super;
+}
+
+.navbar-brand img {
+  width: 30px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-nav {
+  background-color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.start_coding {
+  background-image: url(Images/START_CODING_AND_GET_COACHED_FROM_MENTORS.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.practice {
+  background-image: url(Images/Practice_makes_perfect.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.rocket {
+  background-image: url(Images/DEVELOPER_CAREER_BUILDER.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.build {
+  background-image: url(Images/BUILD_SOMETHING_AND_SOLVE_THE_PROBLEM.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.codes {
+  background-image: url(Images/NO_TEST_BUT_YOUR_CODES.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.buildschool {
+  background-image: url(Images/earth.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.path {
+  background-image: url(Images/SNOW_MOUNTAIN.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.en_ver {
+  background-image: url(Images/STARRY_SKY.webp);
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 50% 50%;
+}
+
+.start_coding,
+.practice,
+.build,
+.codes,
+.buildschool,
+.path,
+.en_ver {
+  color: white;
+}
+
+.start_coding h2,
+.practice h2,
+.build h2,
+.codes h2,
+.buildschool h2,
+.path h2,
+.en_ver h2 {
+  font-size: 36px;
+  margin: 150px 30px 0px;
+}
+
+.start_coding h3,
+.practice h3,
+.build h3,
+.codes h3,
+.buildschool h3,
+.path h3,
+.en_ver h3 {
+  font-size: 16px;
+  padding: 30px;
+}
+
+.build h2, .path h2 {
+  border: 1px solid rgba(61, 155, 233, 0.6);
+  background-color: rgba(61, 155, 233, 0.6);
+  padding: 10px;
+  margin: 150px 60px 0px;
+}
+
+.rocket {
+  color: white;
+}
+
+.rocket h2 {
+  font-size: 28px;
+  margin: 100px 30px 30px;
+}
+
+.rocket p {
+  font-size: 28px;
+  margin: 0 10px;
+}
+
+.rocket h3 {
+  font-size: 16px;
+  width: 300px;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid rgba(61, 155, 233, 0.6);
+  background-color: rgba(61, 155, 233, 0.6);
+}
+
+.path h2 {
+  margin: 150px 50px 0px;
+}
+
+.start_coding ul,
+.practice ul,
+.build ul,
+.codes ul,
+.buildschool ul,
+.path ul,
+.en_ver ul {
+  margin: 80px 0px;
+}
+
+.start_coding ul li,
+.practice ul li,
+.build ul li,
+.codes ul li,
+.buildschool ul li,
+.path ul li,
+.en_ver ul li {
+  display: block;
+  height: 50px;
+  margin: 30px;
+}
+
+.start_coding ul li a,
+.practice ul li a,
+.build ul li a,
+.codes ul li a,
+.buildschool ul li a,
+.path ul li a,
+.en_ver ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: 1px solid rgba(61, 155, 233, 0.6);
+  background-color: rgba(61, 155, 233, 0.6);
+}
+
+.rocket ul {
+  margin: 100px 0px;
+}
+
+.rocket ul li {
+  display: block;
+  height: 50px;
+  margin: 30px;
+}
+
+.rocket ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: 1px solid rgba(61, 155, 233, 0.6);
+  background-color: rgba(61, 155, 233, 0.6);
+}
+
+.container_concept {
+  padding: 10px;
+  width: 100%;
+}
+
+.concept {
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+.concept h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.concept img {
+  width: 25%;
+  display: block;
+  margin: 20px auto;
+}
+
+.concept_point {
+  text-align: center;
+  padding: 25px;
+  line-height: 2em;
+}
+
+.concept_point h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.description {
+  margin: 15px 10px;
+  text-align: center;
+}
+
+.description h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.description p {
+  margin: 20px 0px;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.process_title,
+.tools_title,
+.experiences_title {
+  width: 100%;
+  position: relative;
+}
+
+.process_title img,
+.tools_title img,
+.experiences_title img {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.process_title .overlay,
+.tools_title .overlay,
+.experiences_title .overlay {
+  width: 100%;
+  height: 100px;
+  background-color: #045184;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+}
+
+.process_title h2,
+.tools_title h2,
+.experiences_title h2 {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+  line-height: 1.3em;
+}
+
+.tools_title h2 {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.experiences_title h2 {
+  font-size: 20px;
+  padding: 22px 15px;
+}
+
+.container_process,
+.container_tools,
+.container_experiences {
+  width: 100%;
+}
+
+.process_content {
+  margin: 20px;
+}
+
+.process_content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.process_content img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 10px auto;
+}
+
+.process_content h3 {
+  font-size: 20px;
+  color: red;
+  text-align: center;
+  padding: 10px;
+}
+
+.process_content li {
+  list-style-type: disc;
+  margin: 20px 70px;
+}
+
+.tools_content {
+  margin: 30px 20px;
+}
+
+.tools_content img {
+  width: 150px;
+  display: block;
+  margin: 10px auto;
+}
+
+.tools_content img.sql {
+  width: 15%;
+}
+
+.tools_content h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.tools_content li {
+  list-style: disc;
+  margin: 20px;
+  text-align: justify;
+  line-height: 1.3em;
+}
+
+.experiences_content img {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.footer {
+  width: 100%;
+  background-color: #EEEEEE;
+  border-top: 5px solid #605E5E;
+}
+
+.collaboration {
+  padding: 10px;
+  line-height: 1.3em;
+}
+
+.collaboration h2 {
+  font-size: 20px;
+  padding: 15px 0 0;
+}
+
+.collaboration p {
+  padding: 15px 20px 10px 0px;
+  font-size: 15px;
+}
+
+.info {
+  padding: 10px;
+}
+
+.info p {
+  padding: 10px 20px 0 0;
+  font-size: 13px;
+}
+
+.social {
+  padding: 10px 0;
+}
+
+.social img {
+  padding: 0 10px;
+}
+
+.social a {
+  color: black;
+  padding: 10px 20px 0 0;
+  font-size: 13px;
+}
+
+.builder {
+  font-size: 10px;
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */
