@@ -3,6 +3,7 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
+    font-family: メイリオ,meiryo,ヒラギノ角ゴ pro w3,hiragino kaku gothic pro,sans-serif;
     
 }
 
@@ -161,11 +162,13 @@ body {
     color: white;
     h2{
         font-size: 36px;
-        margin: 150px 30px 0px;
+        margin: 150px auto 0px;
+        line-height: 1.5em;
     }
     h3{
         font-size: 16px;
-        padding: 30px;
+        margin: 30px;
+        line-height: 1.5em;
     }
 }
 
@@ -174,7 +177,8 @@ body {
         border: 1px solid rgba($color: #3d9be9, $alpha: .6);
         background-color: rgba($color: #3d9be9, $alpha: 0.6);
         padding: 10px;
-        margin: 150px 60px 0px;;
+        margin: 150px auto 0px;
+        line-height: 1.5em;
     }
 }
 
@@ -183,10 +187,7 @@ body {
     h2{
         font-size: 28px;
         margin: 100px 30px 30px;
-    }
-    p{
-        font-size: 28px;
-        margin: 0 10px;
+        line-height: 1.5em;
     }
     h3{
         font-size: 16px;
@@ -210,7 +211,7 @@ body {
 .buildschool ul,
 .path ul,
 .en_ver ul{
-    margin: 80px 0px;
+    margin: 100px 0 0 ;
     li {
         display: block;
         height: 50px;
@@ -224,6 +225,12 @@ body {
         }
     }
 }
+
+.build ul,
+.path ul{
+    margin: 50px 0 0 ;
+}
+
 
 .rocket ul{
     margin: 100px 0px;
@@ -246,6 +253,38 @@ body {
     width: 100%;
 }
 
+.concept_shape{
+    display: grid;
+    justify-content: center;
+    margin: 10px;
+}
+
+.slash{
+    width: 30px;
+    height: 30px;
+    border-bottom: 4px solid red;
+    transform: translateY(50px) translateX(5px) rotate(135deg);
+    position: absolute;
+    top: -40px;
+    left: 2px;
+}
+
+.square{
+    width: 40px;
+    height: 40px;
+    border: 6px solid black;
+    position: relative;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 8px solid black;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
 .concept{
     padding: 10px;
     line-height: 1.5em;
@@ -266,10 +305,6 @@ body {
     text-align: center;
     padding: 25px;
     line-height: 2em;
-    // h2{
-    //     font-size: 25px;
-    //     font-weight: bold;
-    // }
     h3{
         font-size: 20px;
         font-weight: bold;
@@ -291,6 +326,7 @@ body {
         margin: 20px 0px;
         text-align: justify;
         line-height: 1.5em;
+        font-size: 17px;
     }
 }
 
@@ -344,7 +380,7 @@ body {
 .process_content{
     padding: 20px;
     h2{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         text-align: center;
         padding: 10px;
@@ -356,7 +392,7 @@ body {
         margin: 10px auto;
     }
     h3{
-        font-size: 20px;
+        font-size: 15px;
         color: red;
         text-align: center;
         padding: 10px;
@@ -379,7 +415,7 @@ body {
         width: 15%;
         }
     h3{
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
         padding: 10px;
     }
@@ -390,6 +426,7 @@ body {
     margin: 20px;
     text-align: justify;
     line-height: 1.3em;
+    font-size: 15px;
 }
 
 .experiences_content img{

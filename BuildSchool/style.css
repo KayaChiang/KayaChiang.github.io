@@ -1,8 +1,10 @@
+@charset "UTF-8";
 html,
 body {
   position: relative;
   height: 100%;
   width: 100%;
+  font-family: メイリオ,meiryo,ヒラギノ角ゴ pro w3,hiragino kaku gothic pro,sans-serif;
 }
 
 /* body {
@@ -166,7 +168,8 @@ body {
 .path h2,
 .en_ver h2 {
   font-size: 36px;
-  margin: 150px 30px 0px;
+  margin: 150px auto 0px;
+  line-height: 1.5em;
 }
 
 .start_coding h3,
@@ -177,14 +180,16 @@ body {
 .path h3,
 .en_ver h3 {
   font-size: 16px;
-  padding: 30px;
+  margin: 30px;
+  line-height: 1.5em;
 }
 
 .build h2, .path h2 {
   border: 1px solid rgba(61, 155, 233, 0.6);
   background-color: rgba(61, 155, 233, 0.6);
   padding: 10px;
-  margin: 150px 60px 0px;
+  margin: 150px auto 0px;
+  line-height: 1.5em;
 }
 
 .rocket {
@@ -194,11 +199,7 @@ body {
 .rocket h2 {
   font-size: 28px;
   margin: 100px 30px 30px;
-}
-
-.rocket p {
-  font-size: 28px;
-  margin: 0 10px;
+  line-height: 1.5em;
 }
 
 .rocket h3 {
@@ -222,7 +223,7 @@ body {
 .buildschool ul,
 .path ul,
 .en_ver ul {
-  margin: 80px 0px;
+  margin: 100px 0 0;
 }
 
 .start_coding ul li,
@@ -251,6 +252,11 @@ body {
   background-color: rgba(61, 155, 233, 0.6);
 }
 
+.build ul,
+.path ul {
+  margin: 50px 0 0;
+}
+
 .rocket ul {
   margin: 100px 0px;
 }
@@ -272,6 +278,42 @@ body {
 .container_concept {
   padding: 10px;
   width: 100%;
+}
+
+.concept_shape {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.slash {
+  width: 30px;
+  height: 30px;
+  border-bottom: 4px solid red;
+  -webkit-transform: translateY(50px) translateX(5px) rotate(135deg);
+          transform: translateY(50px) translateX(5px) rotate(135deg);
+  position: absolute;
+  top: -40px;
+  left: 2px;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border: 6px solid black;
+  position: relative;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 8px solid black;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid transparent;
 }
 
 .concept {
@@ -320,6 +362,7 @@ body {
   margin: 20px 0px;
   text-align: justify;
   line-height: 1.5em;
+  font-size: 17px;
 }
 
 .process_title,
@@ -383,7 +426,7 @@ body {
 }
 
 .process_content h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   padding: 10px;
@@ -397,7 +440,7 @@ body {
 }
 
 .process_content h3 {
-  font-size: 20px;
+  font-size: 15px;
   color: red;
   text-align: center;
   padding: 10px;
@@ -423,7 +466,7 @@ body {
 }
 
 .tools_content h3 {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   padding: 10px;
 }
@@ -433,6 +476,7 @@ body {
   margin: 20px;
   text-align: justify;
   line-height: 1.3em;
+  font-size: 15px;
 }
 
 .experiences_content img {

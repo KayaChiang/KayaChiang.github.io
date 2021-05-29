@@ -1,11 +1,169 @@
 @media screen and (min-width: 768px) {
+  .container-fluid {
+    margin: 20px 0;
+  }
+  .navbar-brand {
+    position: relative;
+    font-size: 30px;
+    padding: 0 30px;
+  }
+  .navbar-brand img {
+    width: 40px;
+  }
+  .navbar-brand a::after {
+    content: 'developer career builder';
+    font-size: 11px;
+    color: white;
+    position: absolute;
+    top: 45px;
+    left: 110px;
+  }
   .navbar-nav {
     background-color: transparent;
     width: 100%;
-    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .nav-item {
+  .navbar-expand-lg .navbar-nav .nav-link {
     color: white;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #48D1CC;
+  }
+  .start_coding ul,
+  .practice ul,
+  .build ul,
+  .codes ul,
+  .buildschool ul,
+  .path ul,
+  .en_ver ul,
+  .rocket ul {
+    margin: 110px 0 0;
+  }
+  .start_coding ul li,
+  .practice ul li,
+  .build ul li,
+  .codes ul li,
+  .buildschool ul li,
+  .path ul li,
+  .en_ver ul li,
+  .rocket ul li {
+    display: inline-block;
+  }
+  .start_coding,
+  .practice,
+  .build,
+  .codes,
+  .buildschool,
+  .path,
+  .en_ver,
+  .rocket {
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+  }
+  .start_coding h2,
+  .practice h2,
+  .build h2,
+  .codes h2,
+  .buildschool h2,
+  .path h2,
+  .en_ver h2,
+  .rocket h2 {
+    font-size: 37px;
+    margin: 150px auto 10px;
+    font-weight: bold;
+  }
+  .start_coding h3,
+  .practice h3,
+  .build h3,
+  .codes h3,
+  .buildschool h3,
+  .path h3,
+  .en_ver h3,
+  .rocket h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 60px auto 20px;
+  }
+  .rocket h3 {
+    width: 600px;
+    margin: 50px auto;
+  }
+  .build h2,
+  .path h2 {
+    width: 350px;
+  }
+  .container_concept {
+    padding: 50px;
+  }
+  .concept {
+    margin: 0;
+    padding: 0 50px;
+  }
+  .description {
+    margin: 0;
+    padding: 50px 50px 0;
+  }
+  .concept_equal {
+    padding: 50px;
+  }
+  .row {
+    padding: 50px;
+  }
+  .container_concept .row:nth-of-type(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .process_title h2,
+  .tools_title h2,
+  .experiences_title h2 {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height: 2.5em;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+  }
+  .process_content {
+    padding: 10px;
+  }
+  .process_description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tools_img {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+  }
+  .tools_content {
+    padding: 10px 10px;
+  }
+  .tools_content img {
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .tools_content img.sql {
+    width: 30%;
+  }
+  .footer {
+    padding: 20px 200px;
+  }
+  .collaboration {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=RWD.css.map */
