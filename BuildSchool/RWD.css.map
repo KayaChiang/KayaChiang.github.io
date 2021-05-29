@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAE/B,AAAA,WAAW,CAAA;IACP,gBAAgB,EAAE,WAAW;IAC7B,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,MAAM;GACrB;EAED,AAAA,SAAS,CAAA;IACL,KAAK,EAAE,KAAK;GACf",
+    "sources": [
+        "RWD.scss"
+    ],
+    "names": [],
+    "file": "RWD.css"
+}
