@@ -8,7 +8,7 @@
     .navbar-brand{
         position: relative;
         font-size: 30px;
-        padding: 0 30px;
+        padding: 0 50px;
         img{
             width: 40px;
         }
@@ -31,6 +31,7 @@
 
     .navbar-expand-lg .navbar-nav .nav-link{
         color: white;
+        padding: 15px;
     }
 
     .navbar-expand-lg .navbar-nav .nav-link:hover{
@@ -62,7 +63,7 @@
         object-fit: cover;
         background-repeat: no-repeat;
         background-position: top;
-        background-size: 100%;
+        background-size: 110%;
         h2{
             font-size: 37px;
             margin: 150px auto 10px;
@@ -92,15 +93,21 @@
     .concept{
         margin: 0;
         padding: 0 50px;
+        img{
+            width: 20%;
+        }
     }
 
     .description{
         margin: 0;
-        padding: 50px 50px 0;
+        padding: 20px 100px 0;
+        p{
+            margin: 20px 0 0;
+        }
     }
 
     .concept_equal{
-        padding: 50px;
+        padding: 30px 50px;
     }
 
     .row{
@@ -111,18 +118,23 @@
         flex-direction: row-reverse;
     }
 
-    .process_title h2, 
-    .tools_title h2,
-    .experiences_title h2{
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        line-height: 2.5em;
-        text-align: center;
-        font-size: 25px;
-        padding: 20px;
+    .process_title, 
+    .tools_title,
+    .experiences_title{ 
+    img{
+        object-fit: cover;
+    }
+        h2{
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            line-height: 3em;
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+        }
     }
 
     .process_content{
@@ -145,11 +157,31 @@
         img{
             margin: 10px auto;
             padding: 10px;
+            width: 180px;
         }
         img.sql{
-            width: 30%;
+            width: 37%;
             }
+        img.git{
+            width: 150px;
+        }
+        img.teams,
+        img.slack{
+            width: 240px;
+        }
     }
+
+    .experiences_content{
+        height: 200px;
+        display: grid;
+        justify-content: space-around;
+        img{
+            margin: 10px auto;
+        }
+        img.gamania{
+            width: 40%;
+    }
+}
 
     .footer{
         padding: 20px 200px;

@@ -5,7 +5,7 @@
   .navbar-brand {
     position: relative;
     font-size: 30px;
-    padding: 0 30px;
+    padding: 0 50px;
   }
   .navbar-brand img {
     width: 40px;
@@ -27,6 +27,7 @@
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     color: white;
+    padding: 15px;
   }
   .navbar-expand-lg .navbar-nav .nav-link:hover {
     color: #48D1CC;
@@ -63,7 +64,7 @@
        object-fit: cover;
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100%;
+    background-size: 110%;
   }
   .start_coding h2,
   .practice h2,
@@ -104,12 +105,18 @@
     margin: 0;
     padding: 0 50px;
   }
+  .concept img {
+    width: 20%;
+  }
   .description {
     margin: 0;
-    padding: 50px 50px 0;
+    padding: 20px 100px 0;
+  }
+  .description p {
+    margin: 20px 0 0;
   }
   .concept_equal {
-    padding: 50px;
+    padding: 30px 50px;
   }
   .row {
     padding: 50px;
@@ -120,6 +127,12 @@
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .process_title img,
+  .tools_title img,
+  .experiences_title img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .process_title h2,
   .tools_title h2,
   .experiences_title h2 {
@@ -128,9 +141,9 @@
     left: 0;
     right: 0;
     margin: auto;
-    line-height: 2.5em;
+    line-height: 3em;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     padding: 20px;
   }
   .process_content {
@@ -155,9 +168,30 @@
   .tools_content img {
     margin: 10px auto;
     padding: 10px;
+    width: 180px;
   }
   .tools_content img.sql {
-    width: 30%;
+    width: 37%;
+  }
+  .tools_content img.git {
+    width: 150px;
+  }
+  .tools_content img.teams,
+  .tools_content img.slack {
+    width: 240px;
+  }
+  .experiences_content {
+    height: 200px;
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .experiences_content img {
+    margin: 10px auto;
+  }
+  .experiences_content img.gamania {
+    width: 40%;
   }
   .footer {
     padding: 20px 200px;
