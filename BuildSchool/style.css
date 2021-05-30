@@ -223,7 +223,7 @@ body {
 .buildschool ul,
 .path ul,
 .en_ver ul {
-  margin: 100px 0 0;
+  margin: 80px 0 0;
 }
 
 .start_coding ul li,
@@ -483,6 +483,10 @@ body {
   display: block;
   margin: 20px auto;
   width: 50%;
+}
+
+.experiences_content img.gamania {
+  width: 40%;
 }
 
 .footer {
