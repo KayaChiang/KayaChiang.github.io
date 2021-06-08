@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron bg-info">
+        <h1>台灣水庫即時水情</h1>
+    </div>
+
+    <div id="container"></div>
+
+    <script>
+
+        let Titles = ['項目', '水庫名稱', '有效蓄水量', '剩餘百分比'];
+
+        let reservoirArray = [
+            {item: 1, Name: '新山水庫(基隆)', Capacity: '901.48萬立方公尺', Percent: '0.69%'},
+            {item: 2, Name: '翡翠水庫(台北、新北)', Capacity: '28306.52萬立方公尺', Percent: '2.60%'},
+            {item: 3, Name: '石門水庫(新北、桃園、新竹)', Capacity: '5766.22萬立方公尺', Percent: '2.20%'},
+            {item: 4, Name: '永和山水庫(新竹、苗栗)', Capacity: '473.66萬立方公尺', Percent: '1.61%'},
+            {item: 5, Name: '寶山水庫(新竹)', Capacity: '138.43萬立方公尺', Percent: '2.78%'},
+        ];
+
+        let container = document.getElementById("container");
+
+        let table = document.createElement("table");
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+
+        table.setAttribute("class", "table table-bordered table-striped table-dark");
+
+        window.onload = function(){
+            createTable(Titles, reservoirArray);
+            container.appendChild(table);
+        }
+
+        function createTable(titles, reservoirArray){
+            AddRow(thead, titles);
+
+            reservoirArray.forEach(function(content){
+                AddRow(tbody,Object.values(content));
+            });
+        }
+
+        function AddRow(target, Data){
+
+                let _row = document.createElement("tr");
+
+                //if(! Array.isArray(Data)) Data = Object.keys(Data).map(x => Data[x]);
+                
+                Data.forEach(function(col){                    
+                    let td = document.createElement("td");
+                    let tdText = document.createTextNode(col);
+                    td.appendChild(tdText);
+                    _row.appendChild(td);
+                })
+                
+            target.appendChild(_row);
+            table.appendChild(target);
+        }
+
+    </script>
+</body>
+</html>
