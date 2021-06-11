@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>The Guessing Game 1-100</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .mobile_design {
+            background-color: #778899;
+            border: 1px solid #708090;
+            width: 400px;
+            height: 700px;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            position: relative;
+        }
+
+        .display {
+            margin: 10px auto;
+            text-align: center;
+            height: 100px;
+        }
+
+        .screen {
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #DCDCDC;
+            width: 350px;
+            height: 500px;
+            border-radius: 20px;
+            position: relative;
+            top: -20px;
+        }
+
+        .mobile_design::after {
+            content: '';
+            border: 1px solid #DCDCDC;
+            background-color: #DCDCDC;
+            position: absolute;
+            width: 70px;
+            height: 10px;
+            top: 45px;
+            left: 160px;
+            border-radius: 20px;
+        }
+
+        .button_section {
+            margin: 20px 0;
+        }
+
+        .button_area {
+            position: relative;
+            margin: 0 auto;
+            left: 25px;
+            top: 12px;
+        }
+
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            display: block;
+            margin: 10px;
+        }
+
+        h2 {
+            font-size: 25px;
+            text-align: center;
+            margin: 10px 20px;
+        }
+
+
+        button {
+            font-size: 35px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 5px 10px;
+            width: 70px;
+            border-radius: 20px;
+            background-color: #F4F3EE;
+            border: 1px solid #C0C0C0;
+            color: black;
+        }
+
+        .start {
+            width: 100px;
+            border-radius: 25px;
+            position: absolute;
+            bottom: 20px;
+            left: 145px;
+            font-size: 30px;
+            border: 2px solid #808080;
+            color: #C83E4D;
+            font-weight: bold;
+        }
+
+        button:hover,
+        .start:hover{
+            background-color: #FFFAFA;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-sm ">
+
+        <div class="mobile_design shadow-lg">
+
+            <div class="screen">
+
+                <div class="row display">
+                    <div class="col" id="title">
+                        <div class="guess_hint">
+                            <h1>Guessing Game</h1>
+                        </div>
+                        <div class="guess_num">
+                            <h2>The number will range from 1 to 100</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button_section ">
+                    <div class="row button_area">
+                        <div class="col">
+                            <button class="number shadow">1</button>
+                            <button class="number shadow">2</button>
+                            <button class="number shadow">3</button>
+                        </div>
+                    </div>
+
+                    <div class="row button_area">
+                        <div class="col">
+                            <button class="number shadow">4</button>
+                            <button class="number shadow">5</button>
+                            <button class="number shadow">6</button>
+                        </div>
+                    </div>
+
+                    <div class="row button_area">
+                        <div class="col">
+                            <button class="number shadow">7</button>
+                            <button class="number shadow">8</button>
+                            <button class="number shadow">9</button>
+                        </div>
+                    </div>
+
+                    <div class="row button_area">
+                        <div class="col">
+                            <button class="clear text-success shadow">X</button>
+                            <button class="number shadow">0</button>
+                            <button class="check text-primary shadow">V</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row start_area ">
+                <div class="col-12">
+                    <button class="start shadow-lg">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        const number = document.querySelectorAll('.number');
+        const clear = document.querySelector('.clear');
+        const check = document.querySelector('.check');
+        const start = document.querySelector('.start');
+        const hint = document.querySelector('.guess_hint > h1');
+        const guess = document.querySelector('.guess_num > h2');
+
+        window.onload = disable();
+
+        function disable() {
+            number.forEach((dis) => {
+                dis.disabled = true;
+                clear.disabled = true;
+                check.disabled = true;
+            });
+        }
+
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        let random = getRandom(1, 100);
+
+
+        start.addEventListener('click', function () {
+            random;
+            guess.innerText = '';
+            clear.disabled = false;
+            check.disabled = false;
+            number.forEach((dis) => {
+                dis.disabled = false;
+            });
+        })
+
+        
+        clear.addEventListener('click', function () {
+            guess.innerText = '';
+        })
+        
+        let min = 0;
+        let max = 100;
+        check.addEventListener('click', function () {
+            if (parseInt(guess.innerText) > max || parseInt(guess.innerText) < min) {
+                guess.innerText = '';
+                alert(`Pick a number between ${min} and ${max}`);
+                return;
+            }
+            hint.innerText = '';
+            if (guess.innerText == random) {
+                alert(`You won!! \nThe number is ${random}. \nLet's play it again.`);
+                window.location.replace(location.href); //讓頁面重新載入一遍而非重新提交
+            }
+            else if (parseInt(guess.innerText) > random) {
+                max = guess.innerText;
+                hint.innerText = `${min} - ${max}`;
+                guess.innerText = '';
+            }
+            else if (parseInt(guess.innerText) < random) {
+                min = guess.innerText;
+                hint.innerText = `${min} - ${max}`;
+                guess.innerText = '';
+            }
+        })
+        
+        number.forEach((num) => {
+            num.addEventListener('click', function () {
+                guess.innerText += num.innerText;
+                if (guess.innerText.length > 2) {
+                    alert(`Pick a number between ${min} and ${max}`);
+                    guess.innerText = guess.innerText.slice(0, guess.innerText.length - 1);
+                    guess.innerText = '';
+                }
+            })
+        })
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
