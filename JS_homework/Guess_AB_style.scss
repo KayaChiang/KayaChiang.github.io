@@ -41,7 +41,7 @@ body {
 .btn_area {
     padding: 0 30px 15px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     button {
         margin: 0 15px;
         border-radius: 10px;
@@ -58,7 +58,7 @@ button:hover{
 .input_area {
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 
     
     input {
@@ -79,7 +79,7 @@ button:hover{
 
 
 .ans_txt {
-    padding: 7px 5px 0;
+    padding: 7px 2px 0;
     color: white;
     font-size: 15px;
 }
@@ -139,7 +139,7 @@ button:hover{
     border-radius: 15px;
     }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .description {
         padding: 50px 80px 30px;
     }
