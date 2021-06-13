@@ -154,7 +154,6 @@ button:hover{
 
     .btn_area {
         padding: 0 80px;
-        justify-content: flex-start;
         button {
             margin: 0 20px;
             font-size: 25px;
@@ -163,7 +162,6 @@ button:hover{
 
     .input_area {
         padding: 50px 80px;
-        justify-content: flex-start;
         
         input {
             font-size: 25px;
@@ -185,9 +183,6 @@ button:hover{
 
     .notes {
         padding: 15px 30px;
-        // text-align: center;
-        display: inline-block;
-        border: 2px solid #e2dccf;
         margin: 15px;
         padding: 5px;
         width: 450px;

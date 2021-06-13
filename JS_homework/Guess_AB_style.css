@@ -161,9 +161,6 @@ button:hover {
   }
   .btn_area {
     padding: 0 80px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .btn_area button {
     margin: 0 20px;
@@ -171,9 +168,6 @@ button:hover {
   }
   .input_area {
     padding: 50px 80px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .input_area input {
     font-size: 25px;
@@ -191,8 +185,6 @@ button:hover {
   }
   .notes {
     padding: 15px 30px;
-    display: inline-block;
-    border: 2px solid #e2dccf;
     margin: 15px;
     padding: 5px;
     width: 450px;
