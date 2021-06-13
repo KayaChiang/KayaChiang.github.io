@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="Guess_AB_style.css">
+    <title>The AB Guessing Game </title>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="title">
+            <h1>猜數字遊戲</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 col-md-6"></div>
+            <div class="description">
+                <ul>
+                    <h2 class="rule">規則說明</h2>
+                    <li class="content">請按開始鈕，產生4個不重複數字</li>
+                    <li class="content">按猜看看，開始判斷幾A幾B</li>
+                    <li class="content">A = 數字、位置都正確<br>B = 數字正確、位置不正確</li>
+                </ul>
+            </div>
+            <div class="btn_area">
+                <button class="start">開始</button>
+                <button class="reset">重來</button>
+                <button class="check_ans">看答案</button>
+            </div>
+            <div class="input_area">
+                <span class="ans_txt">輸入答案</span>
+                <input type="text" id="user_guess" value="" size="17">
+                <span class="input_area_bt">
+                    <a class="guess_btn" type="button">猜看看</a>
+                </span>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <ul class="notes">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let start = document.querySelector('.start');
+        let reset = document.querySelector('.reset');
+        let check_ans = document.querySelector('.check_ans');
+        let user_guess = document.getElementById('user_guess');
+        let guess_btn = document.querySelector('.guess_btn');
+        let process = document.querySelector('.notes');
+        let answer = 0;
+
+        window.onload = click_disable();
+
+        function click_disable() {
+            reset.disabled = true;
+            check_ans.disabled = true;
+            user_guess.disabled = true;
+            guess_btn.disabled = true;
+        }
+
+        function click_able() {
+            reset.disabled = false;
+            check_ans.disabled = false;
+            user_guess.disabled = false;
+            guess_btn.disabled = false;
+        }
+
+        //產生亂數
+        function shuffleArray(num) {
+            let number_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            number_arr.sort(() => Math.random() - .5);
+            answer = number_arr.slice(0, 4);//.join('');
+        }
+
+        //開始按鈕
+        start.addEventListener('click', function () {
+            click_able();
+            shuffleArray();
+            console.log(answer);
+        })
+
+
+        guess_btn.addEventListener('click', function () {
+            let a, b = 0;
+            if (user_guess.value.length != 4 || isNaN(user_guess.value)) {
+                alert('請輸入4個不同的數字');
+                user_guess.value = '';
+            }
+
+            else {
+                let intersection = answer.filter(x => user_guess.value.includes(x));
+                //console.log(intersection);
+
+                b = intersection.length;
+                a = intersection.filter(x => answer.indexOf(x) == user_guess.value.indexOf(x)).length;
+                b = b - a;
+                console.log(`${a}A ${b}B`);
+                let user_txt = user_guess.value;
+                let result = document.createElement('div'); //AB用
+                let input = document.createElement('span'); //輸入紀錄用
+                input.setAttribute('class', 'input_history');
+                if (a == 4) {
+                    result.setAttribute('class', 'result_display');
+                    result.innerHTML = `<span class="badge bg-success">${a}A${b}B</span>`;
+                    process.appendChild(result);
+                    input.innerText = user_txt;
+                    result.appendChild(input);
+                    alert(`恭喜你猜對了！答案是${answer.join('')}`);     
+                    
+                    //console.log(user_txt);
+                }
+                else{
+                    result.setAttribute('class', 'result_display');
+                    result.innerHTML = `<span class="badge bg-danger">${a}A${b}B</span>`;
+                    process.appendChild(result);
+                    input.innerText = user_txt;
+                    result.appendChild(input);
+                    user_guess.value = '';
+                }
+            }
+        })
+
+        reset.addEventListener('click', function(){
+            window.location.replace(location.href); //讓頁面重新載入一遍而非重新提交
+        })
+
+        check_ans.addEventListener('click', x =>{
+            alert(`答案是${answer.join('')}`);     
+        }) 
+
+
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+        
+
+
+</body>
+
+</html>

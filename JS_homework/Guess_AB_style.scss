@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.container-fluid {
+    border-radius: 10px;
+    border: 10px solid #b78240;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: url(https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+}
+
+.title h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 15px 0;
+    color: white;
+}
+
+.description {
+    padding: 15px 30px;
+    color: white;
+}
+
+.rule {
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: -1em;
+}
+
+.content {
+    font-size: 15px;
+    color: white;
+}
+
+.btn_area {
+    padding: 0 30px 15px;
+    display: flex;
+    justify-content: center;
+    button {
+        margin: 0 15px;
+        border-radius: 10px;
+        font-weight: bold;
+        background-color:  #E9E3D6;
+        border: 1px solid  #E9E3D6;
+    }
+}
+
+button:hover{
+    color: #c66b27 ;
+}
+
+.input_area {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    
+    input {
+        border: 1px solid #e2dccf;
+        border-radius: 5px;
+        color: black;
+    }
+}
+
+.start {
+    color: #e85395;
+}
+
+.reset,
+.check_ans{
+    color:#545057;
+}
+
+
+.ans_txt {
+    padding: 7px 5px 0;
+    color: white;
+    font-size: 15px;
+}
+
+.guess_btn {
+    padding: 5px;
+    margin: 0 0 0 8px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #e2dccf;
+    border-radius: 10px;
+    color: #545057;
+    background-color: #E9E3D6;
+    font-weight: bold;
+}
+
+.guess_btn:hover{
+    color: #bd3974;
+}
+
+.notes {
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid #e2dccf;
+    margin: 15px;
+    width: 310px;
+    height: 250px;
+    overflow-y: scroll;
+    justify-content: center;
+
+    .badge,
+    .input_history {
+        margin: 10px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .input_history {
+        font-size: 19px;
+        color: white;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid #e2dccf;
+    background: #e2dccf;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #545057;  
+    border-radius: 15px;
+    }
+
+@media screen and (min-width: 768px) {
+    .description {
+        padding: 50px 80px 30px;
+    }
+
+    .rule {
+        font-size: 25px;
+    }
+
+    .content {
+        font-size: 20px;
+    }
+
+    .btn_area {
+        padding: 0 80px;
+        justify-content: flex-start;
+        button {
+            margin: 0 20px;
+            font-size: 25px;
+        }
+    }
+
+    .input_area {
+        padding: 50px 80px;
+        justify-content: flex-start;
+        
+        input {
+            font-size: 25px;
+            size: 10;
+        }
+    }
+    
+    .ans_txt {
+        padding: 7px 15px 0 0;
+        color: white;
+        font-size: 23px;
+    }
+
+    .guess_btn {
+        padding: 5px;
+        margin: 0 0 0 8px;
+        font-size: 22px;
+    }
+
+    .notes {
+        padding: 15px 30px;
+        // text-align: center;
+        display: inline-block;
+        border: 2px solid #e2dccf;
+        margin: 15px;
+        padding: 5px;
+        width: 450px;
+        height: 350px;
+        position: absolute;
+        top: 115px;
+        right: 30px;
+
+        .badge,
+        .input_history {
+            margin: 10px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .input_history {
+            font-size: 19px;
+            color: white;
+        }
+    }
+}
