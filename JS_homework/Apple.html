@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Apple(台灣)</title>
+
+    <style>
+        .container-fluid {
+            background-color: #333333;
+        }
+
+        .navbar-brand img {
+            margin: 0 10px;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #D6D6D6;
+            background-color: #333333;
+            border: none;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: white;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 0 0 5px;
+        }
+
+        h3,h4{
+            color:black;
+        }
+
+        button.active:focus {
+            color: red;
+        }
+
+
+
+        @media screen and (min-width: 1024px) {
+
+            .navbar-brand img {
+                margin: 0 0 0 100px;
+            }
+
+            .collapse {
+                justify-content: center;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                padding: 0 50px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="Apple_img/apple_icon.svg" alt=""></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="nav-link">iPhone</button>
+                        <!-- <a class="nav-link" href="#">iPhone</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="#">iPad</a> -->
+                        <button class="nav-link wifi">iPad</button>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="#">Watch</a> -->
+                        <button class="nav-link wifi">Watch</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="" class="product_img">
+                <div class="service" style="display: flex; padding: 10px; justify-content: space-around;">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 ">
+                <div class="color">
+                </div>
+
+                <div class="specification">
+                </div>
+
+                <div class="network">
+                </div>
+
+                <div class="total_price">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        //ID(sku)No.、圖片、顏色、容量、網路、價格、說明/描述 id, picture, color, storage, network, price, description
+        var Product = {
+            iPhone: {
+                Detail: {
+                    productName: 'iPhone 11',
+                    product_main_img: 'Apple_img/iphone11/iphone11-white-select-2019.png'
+                },
+                Service: [
+                    { service: 'Apple_img/service.svg', s_text: '快速且免額外付費的運送服務' },
+                    { service: 'Apple_img/return.svg', s_text: '免額外付費輕鬆退貨' },
+                ],
+                Appearance: [
+                    { color: '白色', color_img: 'Apple_img/iphone11/finish-white-201909.jfif', product_Url: 'Apple_img/iphone11/iphone11-white-select-2019.png' },
+                    { color: '黑色', color_img: 'Apple_img/iphone11/finish-black-201909.jfif', product_Url: 'Apple_img/iphone11/iphone11-black-select-2019.png' },
+                    { color: '綠色', color_img: 'Apple_img/iphone11/finish-green-201909.jfif', product_Url: 'Apple_img/iphone11/iphone11-green-select-2019.png' },
+                    { color: '黃色', color_img: 'Apple_img/iphone11/finish-yellow-201909.jfif', product_Url: 'Apple_img/iphone11/iphone11-yellow-select-2019.png' },
+                    { color: '紫色', color_img: 'Apple_img/iphone11/finish-purple-201909.jfif', product_Url: 'Apple_img/iphone11/iphone11-purple-select-2019.png' },
+                    { color: '(PRODUCT)RED', color_img: 'Apple_img/iphone11/finish-red-201909.jfif', product_Url: 'Apple_img/iphone11/iphone11-red-select-2019.png' },
+                ],
+                Spec: {
+                    Storage: [
+                        { size: '64GB', price: 'NT$19,900' },
+                        { size: '128GB', price: 'NT$21,500' },
+                        { size: '256GB', price: 'NT$25,000' },
+                    ]
+                }
+            },
+            iPad: {
+                Detail: {
+                    productName: 'iPad',
+                    product_main_img: 'Apple_img/iPad/ipad-2020-hero-space-wifi-select.png'
+                },
+                Service: [
+                    { service: 'Apple_img/service.svg', s_text: '快速且免額外付費的運送服務' },
+                    { service: 'Apple_img/customize.svg', s_text: '免額外付費的個人化鐫刻服務' },
+                    { service: 'Apple_img/return.svg', s_text: '免額外付費輕鬆退貨' },
+                ],
+                Appearance: [
+                    { color: '太空灰色', color_img: 'Apple_img/iPad/finish-spacegray-201903.png', product_Url: 'Apple_img/iPad/ipad-2020-hero-space-wifi-select.png' },
+                    { color: '銀色', color_img: 'Apple_img/iPad/finish-silver-201903.png', product_Url: 'Apple_img/iPad/ipad-2020-hero-silver-wifi-select.png' },
+                    { color: '金色', color_img: 'Apple_img/iPad/finish-gold-201903.png', product_Url: 'Apple_img/iPad/ipad-2020-hero-gold-wifi-select.png' },
+                ],
+                Spec: {
+                    Storage: [
+                        { size: '32GB', price: 'NT$10,500' },
+                        { size: '128GB', price: 'NT$13,500' },
+                    ],
+                    Add_on: [
+                        { network: 'Wi-Fi', price: 'NT$10,500' },
+                        { network: 'Wi-Fi + 行動網路', price: 'NT$14,800' }
+                    ]
+                }
+            },
+            Watch: {
+                Detail: {
+                    productName: 'Apple Watch SE',
+                    product_main_img: 'Apple_img/Apple Watch SE/01-1watch.jfif'
+                },
+                Service: [
+                    { service: 'Apple_img/service.svg', s_text: '快速且免額外付費的運送服務' },
+                    { service: 'Apple_img/customize.svg', s_text: '免額外付費的個人化鐫刻服務' },
+                    { service: 'Apple_img/return.svg', s_text: '免額外付費輕鬆退貨' },
+                ],
+                Appearance: [
+                    { color: '開心果綠色', color_img: 'Apple_img/Apple Watch SE/01-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/01-1watch.jfif' },
+                    { color: '哈密瓜色', color_img: 'Apple_img/Apple Watch SE/02-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/02-1watch.jfif' },
+                    { color: '湯瑪爾斯藍色', color_img: 'Apple_img/Apple Watch SE/03-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/03-1watch.jfif' },
+                    { color: '粉蝶藍色', color_img: 'Apple_img/Apple Watch SE/04-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/04-1watch.jfif' },
+                    { color: '梅李色', color_img: 'Apple_img/Apple Watch SE/05-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/05-1watch.jfif' },
+                    { color: '海軍深藍色', color_img: 'Apple_img/Apple Watch SE/06-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/06-1watch.jfif' },
+                    { color: '金橘色', color_img: 'Apple_img/Apple Watch SE/07-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/07-1watch.jfif' },
+                    { color: '嫩薑色', color_img: 'Apple_img/Apple Watch SE/08-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/08-1watch.jfif' },
+                    { color: '賽普勒斯綠色', color_img: 'Apple_img/Apple Watch SE/09-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/09-1watch.jfif' },
+                    { color: '粉橘色', color_img: 'Apple_img/Apple Watch SE/010-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/010-1watch.jfif' },
+                    { color: '白色', color_img: 'Apple_img/Apple Watch SE/011-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/011-1watch.jfif' },
+                    { color: '黑色', color_img: 'Apple_img/Apple Watch SE/012-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/012-1watch.jfif' },
+                    { color: '紅色', color_img: 'Apple_img/Apple Watch SE/013-0watch.jfif', product_Url: 'Apple_img/Apple Watch SE/012-1watch.jfif' },
+                ],
+                Spec: {
+                    Storage: [
+                        { size: '40公釐', price: 'NT$8,900' },
+                        { size: '44公釐', price: 'NT$9,900' },
+                    ],
+                    Add_on: [
+                        { network: 'GPS', price: 'NT$9,900' },
+                        { network: 'GPS + 行動網路', price: 'NT$11,400' }
+                    ]
+                }
+            }
+        };
+
+
+        var choose_product = document.querySelectorAll('.navbar-light .navbar-nav .nav-link');
+        var wifi_product = document.querySelectorAll('.wifi');
+        var product_img = document.querySelector('.product_img');
+        var service = document.querySelector('.service')
+        var color_area = document.querySelector('.color');
+        var specification = document.querySelector('.specification');
+        var network = document.querySelector('.network');
+        var total_price = document.querySelector('.total_price');
+
+        //console.log(wifi_product);
+
+
+        //初始化
+        choose_product.forEach((x, index) => {
+            x.addEventListener('click', function () {
+                let index = x.innerText;
+                product_img.innerHTML = '';
+                service.innerHTML = '';
+                color_area.innerHTML = '';
+                specification.innerHTML = '';
+                network.innerHTML = '';
+                total_price.innerHTML = '';
+
+                product_img.setAttribute('src', Product[index].Detail.product_main_img);
+                product_img.setAttribute('style', 'width: 70%; padding:15px; display:block; margin: 0 auto;')
+                //console.log(Product[index].Detail.product_main_img);
+
+                //產生service content
+                for (let serve of Product[index].Service) {
+                    let content = document.createElement('div');
+                    let con_img = document.createElement('img');
+                    let con_span = document.createElement('span');
+
+                    con_img.setAttribute('style', 'display:block; margin:0 auto;');
+                    con_img.setAttribute('src', serve.service);
+                    con_span.setAttribute('style', 'display: block; font-size: 10px; padding:5px;');
+                    con_span.innerText = serve.s_text;
+
+                    content.appendChild(con_img);
+                    content.appendChild(con_span);
+                    service.appendChild(content);
+                };
+
+
+                //產生顏色按鈕區
+                let color_titleH2 = document.createElement('h2');
+                color_titleH2.innerText = '選擇外觀。';
+                color_area.appendChild(color_titleH2);
+
+                for (let item of Product[index].Appearance) {
+                    let color_btn = document.createElement('button');
+                    let color_img = document.createElement('img');
+                    let color_txt = document.createElement('h4');
+
+                    color_btn.setAttribute('class', 'col-6 col-md-4 btn-outline-secondary m-2 colorBtns ');
+                    color_btn.setAttribute('style', 'background-color: #fff;  padding: 10px; width: 30%; border-radius: 10px;');
+
+                    color_img.style.width = '30%';
+                    color_img.setAttribute('src', item.color_img);
+                    //console.log(item.color_img);
+
+                    color_txt.setAttribute('style', 'font-size:12px; padding: 5px 0 0;');
+                    color_txt.innerText = item.color;
+
+                    color_btn.appendChild(color_img);
+                    color_btn.appendChild(color_txt);
+                    color_area.appendChild(color_btn);
+
+                    let first = document.getElementsByClassName('colorBtns')[0].classList.add('active');
+                    //console.log(color_btn);
+                    //顏色按鈕觸發商品圖片改變
+                    color_btn.addEventListener('click', function () {
+                        product_img.setAttribute('src', item.product_Url);
+                        //在class裡增加active辨別選取按鈕
+                        var current = document.getElementsByClassName('active');
+                        current[0].className = current[0].className.replace('active', '');
+                        this.className += 'active';
+                    })
+                }
+
+                //產生規格區
+                let spec_h2 = document.createElement('h2');
+                spec_h2.innerText = '選擇儲存容量。';
+                specification.appendChild(spec_h2);
+
+                for (let condition of Product[index].Spec.Storage) {
+                    let spec_btn = document.createElement('button');
+                    let spec_size = document.createElement('h3');
+                    let spec_price = document.createElement('h4');
+
+                    spec_btn.setAttribute('class', 'col-6 col-md-4 btn-outline-secondary m-2');
+                    spec_btn.setAttribute('style', 'background-color: #fff;  padding: 10px; width: 30%; border-radius: 10px; ');
+
+                    spec_size.innerText = condition.size;
+                    spec_price.innerText = condition.price;
+                    spec_size.setAttribute('style', 'font-size:16px;');
+                    spec_price.setAttribute('style', 'font-size:12px; padding: 5px 0 0');
+
+                    spec_btn.appendChild(spec_size);
+                    spec_btn.appendChild(spec_price);
+                    specification.appendChild(spec_btn);
+                    console.log(spec_btn);
+
+                    spec_btn.addEventListener('click', function () {
+                        total_span.innerText = spec_price.innerText;
+                    })
+                }
+                cal_title();
+                let total_span = document.createElement('span');
+                total_span.setAttribute('style', 'font-size:40px; font-weight:bold; padding:5px');
+                total_price.appendChild(total_span);
+
+                // <span class="total">NT$19,900</span>
+
+            })
+            //產生網路加購區(iPad、Watch)
+            wifi_product.forEach((item, index) => {
+                item.addEventListener('click', function () {
+                    let index = item.innerText;
+                    network.innerHTML = '';
+
+                    let net_h2 = document.createElement('h2');
+                    net_h2.innerText = '連線能力';
+                    network.appendChild(net_h2);
+
+                    for (let wifi of Product[index].Spec.Add_on) {
+                        let net_btn = document.createElement('button');
+                        let net_gps = document.createElement('h3');
+                        let net_price = document.createElement('h4');
+
+                        net_btn.setAttribute('class', 'col-6 col-md-4 btn-outline-secondary m-2');
+                        net_btn.setAttribute('style', 'background-color: #fff;  padding: 10px; width: 95%; border-radius: 10px;');
+
+                        net_gps.innerText = wifi.network;
+                        net_price.innerText = wifi.price;
+                        net_gps.setAttribute('style', 'font-size:16px;');
+                        net_price.setAttribute('style', 'font-size:12px; padding: 5px 0 0');
+
+                        net_btn.appendChild(net_gps);
+                        net_btn.appendChild(net_price);
+                        network.appendChild(net_btn);
+
+                        total_price.innerHTML = '';
+                        cal_title();
+                        net_btn.addEventListener('click', function () {
+                            total_span.innerText = net_price.innerText;
+                        })
+
+                    }
+                    let total_span = document.createElement('span');
+                    total_span.setAttribute('style', 'font-size:40px; font-weight:bold; padding:5px');
+                    total_price.appendChild(total_span);
+                })
+            })
+        })
+
+        //價格試算
+        function cal_title() {
+            let total_h2 = document.createElement('h2');
+            total_h2.innerText = '價格試算';
+            total_price.appendChild(total_h2);
+        }
+
+
+    </script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a8ea7e9d84.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

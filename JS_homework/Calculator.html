@@ -158,7 +158,7 @@
 
         number.forEach((num) => {
             num.addEventListener('click', function () {
-                if (number == '.' && current.innerText.includes('.')) {
+                if (num.innerText == '.' && current.innerText.includes('.')) {
                     return;
                 };
                 current.innerText += num.innerText;

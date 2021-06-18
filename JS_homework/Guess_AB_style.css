@@ -10,7 +10,9 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
+  padding: 0 10px;
   background: url(https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  overflow: auto;
 }
 
 .title h1 {
@@ -22,7 +24,7 @@ body {
 }
 
 .description {
-  padding: 15px 30px;
+  padding: 15px 25px;
   color: white;
 }
 
@@ -39,7 +41,7 @@ body {
 }
 
 .btn_area {
-  padding: 0 30px 15px;
+  padding: 0 20px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +51,7 @@ body {
 }
 
 .btn_area button {
-  margin: 0 15px;
+  margin: 0 10px;
   border-radius: 10px;
   font-weight: bold;
   background-color: #E9E3D6;
@@ -74,6 +76,8 @@ button:hover {
   border: 1px solid #e2dccf;
   border-radius: 5px;
   color: black;
+  font-size: 12px;
+  width: 45%;
 }
 
 .start {
@@ -86,9 +90,9 @@ button:hover {
 }
 
 .ans_txt {
-  padding: 7px 2px 0;
+  padding: 7px 6px 0;
   color: white;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .guess_btn {
@@ -101,6 +105,7 @@ button:hover {
   color: #545057;
   background-color: #E9E3D6;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .guess_btn:hover {
@@ -112,8 +117,8 @@ button:hover {
   text-align: center;
   display: inline-block;
   border: 2px solid #e2dccf;
-  margin: 15px;
-  width: 310px;
+  margin: 15px 0;
+  width: 100%;
   height: 250px;
   overflow-y: scroll;
   -webkit-box-pack: center;
@@ -150,6 +155,9 @@ button:hover {
 }
 
 @media screen and (min-width: 1024px) {
+  .container-fluid {
+    padding: 0 20px;
+  }
   .description {
     padding: 50px 80px 30px;
   }
@@ -171,10 +179,10 @@ button:hover {
   }
   .input_area input {
     font-size: 25px;
-    size: 10;
+    width: 200px;
   }
   .ans_txt {
-    padding: 7px 15px 0 0;
+    padding: 5px;
     color: white;
     font-size: 23px;
   }
@@ -187,7 +195,7 @@ button:hover {
     padding: 15px 30px;
     margin: 15px;
     padding: 5px;
-    width: 450px;
+    width: 40%;
     height: 350px;
     position: absolute;
     top: 115px;
