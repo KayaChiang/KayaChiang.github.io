@@ -157,7 +157,23 @@
     </div>
 
     <script>
+        //iPad的JSON資料
         const url = 'https://raw.githubusercontent.com/KayaChiang/KayaChiang.github.io/main/JS_homework/Apple_filter.js';
+
+        let ipadArray = [];
+
+        window.onload = requestIpadJson();
+
+        function requestIpadJson(){
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function(){
+                ipadArray = JSON.parse(this.responseText); //JSON.parse轉成陣列
+            }
+            xhr.open('GET', url);
+            xhr.send();
+        }
+        console.log(ipadArray);
+
 
     </script>
 

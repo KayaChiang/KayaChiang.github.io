@@ -1,4 +1,4 @@
-let iPad = [
+[
     //太空灰
     { 'sku': '001_gre', 'color': '太空灰色', 'color_img': 'Apple_img/iPad/finish-spacegray-201903.png', 'product_Url': 'Apple_img/iPad/ipad-2020-hero-space-wifi-select.png', 'size': '32GB', 'network': 'Wi-Fi', 'price': 'NT$10,500' },
     { 'sku': '002_gre', 'color': '太空灰色', 'color_img': 'Apple_img/iPad/finish-spacegray-201903.png', 'product_Url': 'Apple_img/iPad/ipad-2020-hero-space-wifi-select.png', 'size': '128GB', 'network': 'Wi-Fi', 'price': 'NT$13,500' },
