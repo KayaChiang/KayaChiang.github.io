@@ -9,27 +9,28 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>LOL英雄聯盟</title>
     <style>
-
-        body{
+        body {
             background-color: #111111;
         }
 
-        .row{
+        .row {
             display: flex;
-            margin: 0 auto;
+            justify-content: center;
         }
-        .jumbotron{
+
+        .jumbotron {
             background-color: #111111;
             color: white;
             font-weight: bold;
             text-align: center;
         }
+
         .jumbotron p {
             font-weight: normal;
             color: grey;
         }
 
-        .show_all{
+        .show_all {
             margin: 10px 0;
         }
 
@@ -48,7 +49,7 @@
             width: 100%;
         }
 
-        .card{
+        .card {
             margin: 10px;
             overflow: hidden;
             background-color: #061C25;
@@ -79,18 +80,17 @@
             background-color: #0180a0 !important;
         }
 
-        .card-body p{
+        .card-body p {
             font-size: 15px;
         }
 
-        .card-body a{
+        .card-body a {
             margin: 5px;
         }
 
-        .modal-header{
-            background-color: rgb(194,143,44);
+        .modal-header {
+            background-color: rgb(194, 143, 44);
         }
-
     </style>
 </head>
 
@@ -99,7 +99,8 @@
     <div class="container-fluid">
         <div class="jumbotron">
             <h1>LEAGUE OF LEGENDS </h1>
-            <p>With more than 140 champions, <br>you’ll find the perfect match for your playstyle. <br>Master one, or master them all.</p>
+            <p>With more than 140 champions, <br>you’ll find the perfect match for your playstyle. <br>Master one, or
+                master them all.</p>
             <button class="btn btn-dark show_all" id="load_btn">Show Me All Champions</button>
         </div>
 
@@ -151,19 +152,18 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="videoModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close cl_v" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8PbhGt8XxSM"
-                        title="YouTube video player" frameborder="0"
+                    <iframe width="100%" height="315" src="" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        allowfullscreen id="video"></iframe>
                     <h1 id="description" class="text-dark"></h1>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary cl_v" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -195,7 +195,7 @@
                 let keys = Object.keys(lol_data.data); //各角色
                 //console.log(keys);
                 let values = Object.values(lol_data.data); //取值用
-                console.log(values);
+                //console.log(values);
 
                 keys.forEach(function (item, index) {
                     let cloneContent = card.content.cloneNode(true);
@@ -216,7 +216,6 @@
                         modal.querySelector('#lolImage').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item}_0.jpg`;
                         modal.querySelector('#description_i').innerHTML = `</br>${values[index].blurb}</br></br>hp：${values[index].stats.hp} </br> Move Speed：${values[index].stats.movespeed} </br>Armor：${values[index].stats.armor} </br>Spell Block：${values[index].stats.spellblock} </br>Attack Range：${values[index].stats.attackrange}`;
 
-
                     })
                     //video
                     cloneContent.querySelector('.video').addEventListener('click', function () {
@@ -225,6 +224,12 @@
 
                         let modal_video = document.getElementById('Modal_video');
                         modal_video.querySelector('h5').innerText = '英雄聯盟影片';
+                        modal_video.querySelector('iframe').src = 'https://www.youtube.com/embed/8PbhGt8XxSM';
+
+                        // $('.modal').on('hidden.bs.modal', function () {
+                        //     var $iframe = $(this).find('iframe');
+                        //     $iframe.attr('src', '');
+                        // });
                     })
                     row.append(cloneContent);
                 })
@@ -232,6 +237,14 @@
             xhr.open('Get', url);
             xhr.send();
         };
+
+        let close = document.querySelectorAll('.cl_v');
+        console.log(close);
+        close.forEach(item =>{
+            item.addEventListener('click', function () {
+                document.querySelector('iframe').removeAttribute('src');
+            })
+        })
 
 
     </script>
