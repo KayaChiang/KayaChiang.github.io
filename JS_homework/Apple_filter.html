@@ -60,114 +60,124 @@
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
 
-                                    <button class="col-6 col-md-4 btn-outline-secondary m-2"
-                                        style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
-                                        <img src="Apple_img/iPad/finish-spacegray-201903.png" style="width: 30%;">
-                                        <h3 style="font-size: 12px; padding: 5px 0 0 ;">太空灰色</h3>
-                                    </button>
+                            <div class="card-body-color">
 
-                                    <button class="col-6 col-md-4 btn-outline-secondary m-2"
-                                        style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
-                                        <img src="Apple_img/iPad/finish-spacegray-201903.png" style="width: 30%;">
-                                        <h3 style="font-size: 12px; padding: 5px 0 0 ;">銀色</h3>
-                                    </button>
-                                    <button class="col-6 col-md-4 btn-outline-secondary m-2"
-                                        style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
-                                        <img src="Apple_img/iPad/finish-spacegray-201903.png" style="width: 30%;">
-                                        <h3 style="font-size: 12px; padding: 5px 0 0 ;">金色</h3>
-                                    </button>
-                                </div>
+                                <template id="color-btn">
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample" style="display:inline; width: 100%;">
+                                        <button class="col-6 col-md-4 btn-outline-secondary m-2 _color"
+                                            style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
+                                            <img src="Apple_img/iPad/finish-spacegray-201903.png" style="width: 30%;">
+                                            <h3 style="font-size: 12px; padding: 5px 0 0 ;">太空灰色</h3>
+                                        </button>
+                                    </div>
+                                </template>
+
+                                <!-- <button class="col-6 col-md-4 btn-outline-secondary m-2"
+                                    style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
+                                    <img src="Apple_img/iPad/finish-spacegray-201903.png" style="width: 30%;">
+                                    <h3 style="font-size: 12px; padding: 5px 0 0 ;">銀色</h3>
+                                </button>
+                                <button class="col-6 col-md-4 btn-outline-secondary m-2"
+                                    style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
+                                    <img src="Apple_img/iPad/finish-spacegray-201903.png" style="width: 30%;">
+                                    <h3 style="font-size: 12px; padding: 5px 0 0 ;">金色</h3>
+                                </button> -->
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="specification">
+                <div class="specification">
 
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0"
-                                        style="display: flex; font-size: 20px; justify-content: space-between;">
-                                        <span class="spec_title" style="display: flex; align-items: center;">儲存裝置</span>
-                                        <button class="btn btn-link btn-block text-left change" type="button"
-                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne"
-                                            style="display: inline-block; width: 60px; font-size: 15px;">
-                                            更改
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0"
+                                    style="display: flex; font-size: 20px; justify-content: space-between;">
+                                    <span class="spec_title" style="display: flex; align-items: center;">儲存裝置</span>
+                                    <button class="btn btn-link btn-block text-left change" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                        aria-controls="collapseOne"
+                                        style="display: inline-block; width: 60px; font-size: 15px;">
+                                        更改
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div class="card-body-spec">
+
+                                <template id="spec_btn">
+                                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample" style="display:inline; width: 100%;">
                                         <button class="col-6 col-md-4 btn-outline-secondary m-2"
                                             style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
                                             <h3 style="font-size: 20px; padding: 5px 0 0 ;font-weight: bold;">32GB</h3>
                                             <h4 style="font-size: 13px;">NT$10,500起</h4>
                                         </button>
-                                        <button class="col-6 col-md-4 btn-outline-secondary m-2"
-                                            style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
-                                            <h3 style="font-size: 20px; padding: 5px 0 0 ;font-weight: bold;">128GB</h3>
-                                            <h4 style="font-size: 13px;">NT$13,500起</h4>
-                                        </button>
+                                </template>
 
-                                    </div>
-                                </div>
+                                <!-- <button class="col-6 col-md-4 btn-outline-secondary m-2"
+                                    style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
+                                    <h3 style="font-size: 20px; padding: 5px 0 0 ;font-weight: bold;">128GB</h3>
+                                    <h4 style="font-size: 13px;">NT$13,500起</h4>
+                                </button> -->
+
                             </div>
                         </div>
                     </div>
-
-                    <div class="network">
-
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0"
-                                        style="display: flex; font-size: 20px; justify-content: space-between;">
-                                        <span class="net_title" style="display: flex; align-items: center;">連線能力</span>
-                                        <button class="btn btn-link btn-block text-left change" type="button"
-                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne"
-                                            style="display: inline-block; width: 60px; font-size: 15px;">
-                                            更改
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <button class="col-6 col-md-4 btn-outline-secondary m-2"
-                                            style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
-                                            <h3 style="font-size: 18px; padding: 5px 0 0 ; font-weight: bold;">Wi-Fi
-                                            </h3>
-                                            <h4 style="font-size: 13px;">NT$10,500起</h4>
-                                        </button>
-                                        <button class="col-6 col-md-4 btn-outline-secondary m-2"
-                                            style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
-                                            <h3 style="font-size: 18px; padding: 5px 0 0 ; font-weight: bold;">Wi-Fi +
-                                                行動網路</h3>
-                                            <h4 style="font-size: 13px;">NT$14,800起</h4>
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="total_price">
                 </div>
             </div>
 
+            <div class="network">
 
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0" style="display: flex; font-size: 20px; justify-content: space-between;">
+                                <span class="net_title" style="display: flex; align-items: center;">連線能力</span>
+                                <button class="btn btn-link btn-block text-left change" type="button"
+                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                    style="display: inline-block; width: 60px; font-size: 15px;">
+                                    更改
+                                </button>
+                            </h2>
+                        </div>
 
+                        <div class="card-body-net">
 
+                            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
+                                data-parent="#accordionExample" style="display:inline; width: 100%;">
+                                <button class="col-6 col-md-4 btn-outline-secondary m-2"
+                                    style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
+                                    <h3 style="font-size: 18px; padding: 5px 0 0 ; font-weight: bold;">Wi-Fi
+                                    </h3>
+                                    <h4 style="font-size: 13px;">NT$10,500起</h4>
+                                </button>
+                                <button class="col-6 col-md-4 btn-outline-secondary m-2"
+                                    style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
+                                    <h3 style="font-size: 18px; padding: 5px 0 0 ; font-weight: bold;">Wi-Fi +
+                                        行動網路</h3>
+                                    <h4 style="font-size: 13px;">NT$14,800起</h4>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="total_price">
+        </div>
+    </div>
+
+
+
+
+    </div>
 
     </div>
 
@@ -183,34 +193,103 @@
         function requestIpadJson() {
             let xhr = new XMLHttpRequest();
             xhr.onload = function () {
-                console.log(this.responseText);
+                //console.log(this.responseText);
                 ipad_data = JSON.parse(this.responseText); //JSON.parse轉成陣列
-                dubugger;
-                let keys = Object.keys(ipad_data);
-                let values = Object.values(ipad_data)
                 console.log(ipad_data);
-                //console.log(values);
+                color();
+                create_spec();
+
             }
             xhr.open('Get', url);
             xhr.send();
         }
 
+        let sample_color_btn = document.getElementById('color-btn');
+        let color_area = document.querySelector('.card-body-color');
 
-        var product_img = document.querySelector('.product_img'); //大圖
-        var color_area = document.querySelector('.color');
-        var specification = document.querySelector('.specification');
-        var network = document.querySelector('.network');
-        var total_price = document.querySelector('.total_price');
-        var color_title = document.querySelector('.color_title'); //外觀
+        function color() {
+            let color_title = document.querySelector('.color_title'); //外觀
+            let product_img = document.querySelector('.product_img'); //大圖
+
+            //商品顏色資料
+            let products = ipad_data.map(x => {
+                return {
+                    url_color: x.color_img,
+                    url_product: x.product_Url,
+                    color: x.color
+                }
+            });
+            
+            //去除重複資料
+            products = pro_img.filter(function (element, index) {
+                return pro_img.findIndex(x => x.color == element.color) == index;
+            })
+
+            products.forEach(function (item) {
+                let colorTemp = sample_color_btn.content.cloneNode(true);
+                colorTemp.querySelector('h3').innerText = item.color;
+                colorTemp.querySelector('img').src = item.url_color;
+
+                colorTemp.querySelector('button').onclick = function () {
+                    product_img.setAttribute('src', item.url_product);
+                    color_title.innerText = item.color;
+                }
+
+                color_area.append(colorTemp);
+            })
+        }
 
 
 
 
+        let specification = document.querySelector('.specification');
 
-        // <button class="col-6 col-md-4 btn-outline-secondary m-2" style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
-        //     <img src="Apple_img/iPad/finish-spacegray-201903.png" style="width: 30%;">
-        //     <h3 style="font-size: 12px; padding: 5px 0 0 ;">太空灰色</h3>
-        // </button>
+        function create_spec() {
+            let spec = ipad_data.map(x => x.size);
+            let _spec = spec.filter(function (element, index) {
+                return spec.indexOf(element) == index;
+            })
+            console.log(_spec);
+
+            _spec.forEach(function (spec_content, index) {
+                let sample_spec_btn = document.getElementById('spec_btn');
+                console.log(sample_spec_btn);
+            })
+        }
+
+        // <template id="spec_btn">
+        //     <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+        //         data-parent="#accordionExample" style="display:inline; width: 100%;">
+        //         <button class="col-6 col-md-4 btn-outline-secondary m-2"
+        //             style="background-color: #fff; padding: 10px; width: 40%; border-radius: 10px;">
+        //             <h3 style="font-size: 20px; padding: 5px 0 0 ;font-weight: bold;">32GB</h3>
+        //             <h4 style="font-size: 13px;">NT$10,500起</h4>
+        //         </button>
+        // </template>
+
+        function net() {
+            let network = document.querySelector('.network');
+
+            let net = ipad_data.map(x => x.network);
+
+            let _net = net.filter(function (element, index) {
+                return net.indexOf(element) == index;
+            })
+            console.log(_net);
+        }
+
+        function price() {
+            let total_price = document.querySelector('.total_price');
+
+            let price = ipad_data.map(x => x.price);
+
+            let _price = price.filter(function (element, index) {
+                return price.indexOf(element) == index;
+            })
+            console.log(_price);
+        }
+
+
 
     </script>
 
