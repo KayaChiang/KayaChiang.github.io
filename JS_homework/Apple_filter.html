@@ -191,6 +191,7 @@
                         products = products.filter(function (element, index) {
                             return products.findIndex(x => x.color == element.color) == index;
                         })
+                        console.log(products);
 
                         let color_title = document.querySelector('.color_title'); //外觀
                         let product_img = document.querySelector('.product_img'); //大圖

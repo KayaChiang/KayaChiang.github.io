@@ -8,16 +8,371 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a8ea7e9d84.js" crossorigin="anonymous"></script>
-    <title>Let's draw a card!</title>
+    <title>抽牌比大小遊戲</title>
 </head>
 <style>
+    body {
+        background: url("https://images.unsplash.com/photo-1611072337226-1140ab367200?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=679&q=80") no-repeat;
+        background-size: 100%;
+    }
 
+    .container {
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .row {
+        padding: 10px;
+    }
+
+    [box-id] {
+        width: 50px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid white;
+        background: url("https://images.unsplash.com/photo-1525562999149-d4eaea9e343a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80");
+        background-size: 120%;
+        transition: .3s;
+        margin: 2px;
+        margin-bottom: 0;
+    }
+
+    [box-id].active {
+        border: 5px solid orange;
+        box-shadow: 0 0 20px orange;
+        transition: 0s;
+    }
+
+    .choose,
+    .draw_again {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .draw_again {
+        align-items: center;
+    }
+
+    .choose button,
+    .draw_again button,
+    .show_rule {
+        width: 80px;
+        margin: 10px;
+        display: inline-block;
+        color: white;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 7px #999;
+        font-weight: bold;
+        background-color: rgb(23, 162, 184);
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .show_rule {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        font-size: 14px;
+        background-color: #343A40;
+        box-shadow: 0 10px #999;
+        position: relative;
+        left: 40%;
+    }
+
+    .draw_again button {
+        width: 100px;
+    }
+
+    .draw_again button:first-child {
+        background-color: #DC3545;
+    }
+
+    .draw_again button:last-child {
+        background-color: #28A745;
+    }
+
+    .choose button:hover {
+        background-color: rgb(27, 135, 151);
+    }
+
+    .draw_again button:first-child:hover {
+        background-color: #b12b39;
+    }
+
+    .draw_again button:last-child:hover {
+        background-color: #1f8336;
+    }
+
+    .show_rule:hover {
+        background-color: #313636;
+    }
+
+    .choose button:active,
+    .draw_again button:active,
+    .show_rule:active {
+        box-shadow: 0 4px #666;
+        transform: translateY(2px);
+    }
+
+    .number,
+    .message {
+        position: relative;
+    }
+
+    .number p,
+    .message p {
+        position: absolute;
+        top: 20%;
+        bottom: 0;
+        margin: auto;
+        height: 60px;
+        font-size: 18px;
+        left: 15%;
+    }
+
+    .modal-title {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .modal-header {
+        background: url('https://images.unsplash.com/photo-1564115484-a4aaa88d5449?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+        background-size: 100%;
+    }
+
+    .modal-body {
+        padding: 40px;
+    }
+
+    .rule li {
+        font-size: 15px;
+    }
 </style>
 
 <body>
-    <div class="card">
-        <i class="far fa-chess-board"></i>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div box-id="1" class="col-1"></div>
+            <div box-id="2" class="col-1"></div>
+            <div box-id="3" class="col-1"></div>
+            <div box-id="4" class="col-1"></div>
+            <div box-id="5" class="col-1"></div>
+            <div box-id="6" class="col-1"></div>
+            <div box-id="7" class="col-1"></div>
+            <div box-id="8" class="col-1"></div>
+            <div box-id="9" class="col-1"></div>
+            <div box-id="10" class="col-1"></div>
+            <div class="col-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div box-id="20" class="col-1"></div>
+            <div box-id="19" class="col-1"></div>
+            <div box-id="18" class="col-1"></div>
+            <div box-id="17" class="col-1"></div>
+            <div box-id="16" class="col-1"></div>
+            <div box-id="15" class="col-1"></div>
+            <div box-id="14" class="col-1"></div>
+            <div box-id="13" class="col-1"></div>
+            <div box-id="12" class="col-1"></div>
+            <div box-id="11" class="col-1"></div>
+            <div class="col-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div box-id="21" class="col-1"></div>
+            <div box-id="22" class="col-1"></div>
+            <div box-id="23" class="col-1"></div>
+            <div box-id="24" class="col-1"></div>
+            <div box-id="25" class="col-1"></div>
+            <div box-id="26" class="col-1"></div>
+            <div box-id="27" class="col-1"></div>
+            <div box-id="28" class="col-1"></div>
+            <div box-id="29" class="col-1"></div>
+            <div box-id="30" class="col-1"></div>
+            <div class="col-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 rule">
+                <!-- Button trigger modal -->
+                <button type="button" class="show_rule" data-toggle="modal" data-target="#staticBackdrop">
+                    點我看<br>遊戲規則
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">抽牌比大小遊戲</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <li>數字範圍為亂數1~30。</li>
+                                <li>請先選擇要比大或比小。</li>
+                                <li>按下「抽數字牌」來一較高下。</li>
+                                <li>勝負揭曉後，請按「再玩一次」挑戰吧！</li>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">開始比大小</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 choose">
+                <button id="big" onclick="chooseBig()">比大</button>
+                <button id="small" onclick="chooseSmall()">比小</button>
+            </div>
+            <div class="col-3 number">
+                <p id="num"></p>
+            </div>
+            <div class="col-2 draw_again">
+                <button id="start">抽數字牌</button>
+                <button id="restart">再玩一次</button>
+            </div>
+            <div class="col-3 message">
+                <p id="msg"></p>
+            </div>
+        </div>
+
+
     </div>
+
+    <script>
+
+        window.onload = initial;
+
+        //排序
+        let bricks = document.querySelectorAll('[box-id]');
+        console.log(bricks);
+        bricks = Array.from(bricks).sort((a, b) => {
+            return a.getAttributeNode('box-id').value - b.getAttributeNode('box-id').value;
+        });
+        console.log(bricks);
+
+        let steps = 0;
+        let allSteps = 0;
+        let current = 0;
+        let speed = 0;
+
+        let start = document.getElementById('start');
+        console.log(start);
+        start.addEventListener('click', function () {
+            speed = 50;
+
+            let random = Math.floor(Math.random() * bricks.length) + 1;
+            steps = random + (3 * bricks.length);
+            allSteps = steps;
+            turnAround();
+            start.disabled = true;
+        })
+
+
+        function turnAround() {
+            bricks[current].classList.remove('active');
+            current++;
+
+            if (current >= bricks.length) current = 0;
+
+            bricks[current].classList.add('active');
+            steps--;
+
+            if (steps > 0) {
+                setTimeout(turnAround, speed);
+                if (steps < Math.floor((allSteps / 3))) speed += 7;
+            }
+            else {
+                let msg = document.getElementById('msg');
+                let userNum; //暫存玩家抽的數字
+                userNum = userNumber();
+                console.log(userNum);
+                msg.innerText = `你抽到的數字是${userNum}`;
+                if (number.innerText.includes('大')) {
+                    if (userNum > keepNum) {
+                        alert(`你贏了!!你抽到的數字是${userNum}比${keepNum}大!`);
+                    }
+                    if (userNum < keepNum) {
+                        alert(`你輸了!!你抽到的數字是${userNum}比${keepNum}小!`);
+                    }
+                }
+                debugger;
+                if (number.innerText.includes('小')) {
+                    if (userNum < keepNum) {
+                        alert(`你贏了!!你抽到的數字是${userNum}比${keepNum}小!`);
+                    }
+                    if (userNum > keepNum) {
+                        alert(`你輸了!!你抽到的數字是${userNum}比${keepNum}大!`);
+                    }
+
+                }
+                if (userNum == keepNum) {
+                    alert(`平手!你抽到的數字是${userNum}和${keepNum}一樣! 再來一次~`);
+                }
+            }
+        }
+
+
+        let number = document.getElementById('num');
+        let big = document.getElementById('big');
+        let small = document.getElementById('small');
+        let keepNum; //暫存比大小的數字
+        console.log(big);
+
+        keepNum = getRandom();
+        function chooseBig() {
+            start.disabled = false;
+            number.innerText = `請抽出一張比${keepNum}大的牌`;
+            console.log(keepNum);
+            big.disabled = true;
+            small.addEventListener('click', function () {
+                alert('你已經決定要比大了，不要反悔趕快抽牌吧！');
+                number.innerText = `請抽出一張比${keepNum}大的牌`;
+            })
+        }
+
+        function chooseSmall() {
+            start.disabled = false;
+            number.innerText = `請抽出一張比${keepNum}小的牌`;
+            small.disabled = true;
+            big.addEventListener('click', function () {
+                alert('你已經決定要比小了，不要反悔趕快抽牌吧！');
+                number.innerText = `請抽出一張比${keepNum}小的牌`;
+            })
+        }
+
+        function getRandom() {
+            return Math.floor(Math.random() * 30) + 1;
+        }
+
+        function userNumber() {
+            return Math.floor(Math.random() * 30) + 1;
+        }
+
+        let restart = document.getElementById('restart');
+        restart.addEventListener('click', function () {
+            window.location.replace(location.href);
+        })
+
+        function initial(){
+            start.disabled = true;
+        }
+
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
