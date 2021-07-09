@@ -12,8 +12,6 @@
 
     <script src="https://kit.fontawesome.com/a8ea7e9d84.js" crossorigin="anonymous"></script>
 
-
-
     <title>Calendar</title>
     <style>
         .time {
@@ -198,7 +196,6 @@
                             <i class="fas fa-pencil-alt"></i>
                         </button>
 
-
                     </div>
                 </div>
             </div>
@@ -256,7 +253,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Modal Edit -->
         <div class="modal fade" id="editEventModal" tabindex="-1" aria-labelledby="editEventModalLabel"
@@ -376,7 +372,6 @@
                                         editColor.value = item.color;
 
                                         editDate.setAttribute('data-id', index);
-
                                     })
                                     ul.appendChild(li);
                                 });
@@ -522,7 +517,6 @@
 
             editBtn.addEventListener('click', () => {
                 edit(main, textArea);
-
             })
 
             textArea.addEventListener('input', (e) => {
