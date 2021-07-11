@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a8ea7e9d84.js" crossorigin="anonymous"></script>
+
+    <!-- map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <title>全台餐飲觀光資訊</title>
+    <style>
+        body {
+            background-color: #FAFAFA;
+            position: relative;
+        }
+
+        .container-fluid>.row {
+            height: 100vh;
+        }
+
+        #map {
+            height: 100%;
+        }
+
+        .form-group {
+            margin: 0 auto;
+            padding: 0 30px 30px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        .pic img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .table {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .table th {
+            width: 100px;
+        }
+
+        .background img {
+            position: absolute;
+            z-index: -1;
+            bottom: -100px;
+            opacity: .5;
+            width: 97%;
+        }
+
+        .reference {
+            padding: 20px 0 0;
+        }
+
+        .reference p {
+            color: rgb(161, 157, 157);
+            font-size: 12px;
+            line-height: .5;
+        }
+
+        .reference a {
+            color: rgb(161, 157, 157);
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="title text-center py-3">
+            <!-- <h1>全台餐飲觀光資訊</h1> -->
+        </div>
+
+        <div class="row py-3">
+            <div class="col-6">
+                <div id="map">
+                    <!-- 地圖 -->
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="row">
+                    <!-- 下拉式選單 -->
+                    <div class="form-group col-10">
+                        <label for="county">請選擇想去的縣市或直接點擊地圖</label>
+                        <select class="form-control" id="county">
+                            <!-- 動態產生option -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row info">
+                    <h2 class="col-12 text-center">
+                        <strong></strong> 觀光資訊
+                    </h2>
+                    <div class="col-12 pic">
+                    </div>
+
+                    <div class="col-12">
+                        <table class="table table-bordered table-striped text-center">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="background">
+                    <img src="https://png.pngtree.com/png-clipart/20190115/ourlarge/pngtree-building-city-monument-illustration-png-image_356354.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+            <div class="col-12 reference">
+                <p>資料來源：政府資料開放平臺</p>
+                <p>取得日期：2021年7月11日</p>
+                <p><a href='https://zh.pngtree.com/so/旅遊局'>旅遊局 png來自 zh.pngtree.com</a></p>
+            </div>
+
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script>
+        //初始化地圖，此語法要引入CDN才可用，括號內容(ID)
+        let map = L.map('map', {
+            center: [25.03416068163684, 121.56454962636319], //經緯度
+            zoom: 10 //縮放
+        });
+
+        //設定圖資來源
+        let osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        let osm = new L.TileLayer(osmUrl, { minZoom: 8, maxZoom: 19 }); //圖層要用哪個網址、最小最大縮放
+        map.addLayer(osm); //將圖層加到map裡
+
+        //抓資料來源
+        //台灣行政區域資料
+        let areaDataRequest = axios.get('https://raw.githubusercontent.com/KayaChiang/FileStorage/main/TaiwanDistricts.json');
+        //全臺餐飲觀光資料
+        let sightseeingDataRequest = axios.get('https://raw.githubusercontent.com/KayaChiang/FileStorage/main/TaiwanSightseeing_edit.json');
+
+        let areaData; //行政區
+        let sightData; //景點
+        let sightAreaData; //行政+景點
+        let markers = L.markerClusterGroup(); //marker叢集物件
+
+        function setMarker() {
+            if (markers) markers.clearLayers(); //清空markers
+
+            Object.keys(sightAreaData).forEach(x => {
+                let data = sightAreaData[x];
+                let marker = L.marker([data[0].Lat, data[0].Lng]);
+                console.log(data);
+                // console.log(marker);
+
+                //自訂按下maker時
+                marker.addEventListener('click', function () {
+                    document.querySelector('strong').innerText = `${data[0].Region} ${data[0].Town}`;
+
+                    let pic = document.querySelector('.pic');
+                    let tbody = document.querySelector('tbody');
+                    tbody.innerHTML = '';
+                    pic.innerHTML = '';
+
+                    let sightTr = document.createElement('tr');
+                    data.forEach(x => {
+                        let img = document.createElement('img');
+                        let imgDes = document.createElement('p');
+                        let th = document.createElement('th');
+                        let td = document.createElement('td');
+                        let a = document.createElement('a');
+
+                        pic.innerHTML = `
+                        <img src="${x.Picture1}" alt="">`;
+
+                        tbody.innerHTML = `
+                            <tr>
+                                <th>店名</th>
+                                <td>${x.Name}</td>
+                            </tr>
+                            <tr>
+                                <th>電話</th>
+                                <td>${x.Tel}</td>
+                            </tr>
+                            <tr>
+                                <th>地址</th>
+                                <td>${x.Add}</td>
+                            </tr>
+                            <tr>
+                                <th>網站</th>
+                                <td><a href="${x.Website}">${x.Website}</a></td>
+                            </tr>
+                            <tr>
+                                <th>營業時間</th>
+                                <td>${x.Opentime}</td>
+                            </tr>
+                            <tr>
+                                <th>簡介</th>
+                                <td style="font-weight:bold;">${x.Description}</td>
+                            </tr>
+                        `;
+                    })
+
+                });
+                //點擊地圖上的點時會出現訊息
+                marker.bindPopup(`
+                    <h4>${data[0].Region} ${data[0].Town}</h4>
+                    <h6 style="font-weight:bold; font-size:18px; padding-top:5px;">店名：${data[0].Name}</h6>
+                    <p>營業時間：${data[0].Opentime}</p>
+                `);
+
+                markers.addLayer(marker);
+            });
+            map.addLayer(markers);
+        }
+
+        window.onload = function () {
+            Promise.all([areaDataRequest, sightseeingDataRequest])
+                .then(res => {
+                    let [areaRes, sightRes] = res;
+
+                    console.log(areaRes);
+                    console.log(sightRes);
+
+                    areaData = areaRes.data;
+                    sightData = sightRes.data;
+
+                    console.log(areaData);
+                    console.log(sightData);
+
+                    //組成新的資料結構.map()
+                    sightAreaData = sightData.map(x => {
+                        //find找第一個值，篩選出相同的縣市區等資料
+                        let area = areaData.find(y => y.City == x.Region && y.District == x.Town);
+                        return {
+                            RegionTown: x.Region + x.Town,
+                            Region: x.Region,
+                            Town: x.Town,
+                            Name: x.Name,
+                            Tel: x.Tel,
+                            Add: x.Add,
+                            Website: x.Website,
+                            Opentime: x.Opentime,
+                            Description: x.Description,
+                            Picture1: x.Picture1,
+                            Picdescribe1: x.Picdescribe1,
+                            Lat: x.Py,
+                            Lng: x.Px
+                        }
+                    }).filter(x => x.Lat != undefined).groupBy('RegionTown');
+
+                    console.log(sightAreaData);
+
+                    //初始化地圖marker
+                    setMarker();
+
+                    //初始縣市下拉選單
+                    let countySelect = document.querySelector('#county');
+                    //...new Set去除重複
+                    ['請選擇'].concat([...new Set(areaData.map(x => x.City))]).forEach(x => {
+                        let option = document.createElement('option');
+                        option.innerHTML = x;
+                        option.value = x == '請選擇' ? '' : x;
+                        countySelect.appendChild(option);
+                    });
+                })
+        }
+
+        //縣市選擇
+        document.querySelector('#county').addEventListener('change', function () {
+            console.log(this.value);
+
+            if (this.value != '') {
+                //改變地圖焦點位置
+                let county = areaData.find(x => x.City == this.value);
+                map.setView([county.Lat, county.Lng], 12); //12把焦點放大
+            }
+        });
+
+        //array groupBy 方法註冊
+        Array.prototype.groupBy = function (prop) {
+            return this.reduce(function (groups, item) {
+                const val = item[prop];
+                groups[val] = groups[val] || [];
+                groups[val].push(item);
+                return groups;
+            }, {});
+        }
+
+    </script>
+
+
+</body>
+
+</html>
