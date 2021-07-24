@@ -16,8 +16,10 @@
     <style>
         body {
             background-color: rgb(51, 65, 91);
+            position: relative;
         }
 
+        /* sticky?? */
         .navbar {
             position: sticky;
             opacity: .9;
@@ -33,6 +35,11 @@
 
         .category {
             padding: 5px;
+        }
+
+        .dropdown-item>i {
+            font-size: 15px;
+            width: 20px;
         }
 
         .search-bar {
@@ -75,6 +82,21 @@
 
         .header-card {
             width: 100%;
+            background-color: #404E67;
+            color: white;
+        }
+
+        .header-card-body>a {
+            text-decoration: none;
+        }
+
+        .header-card-body {
+            padding: 10px;
+        }
+
+        .header-card-title {
+            text-decoration: none;
+            color: white;
         }
 
         .header-card img {
@@ -88,7 +110,7 @@
 
 
         .ex-title {
-            padding-top: 30px;
+            padding: 30px 0;
             color: white;
         }
 
@@ -135,11 +157,52 @@
             color: rgb(196, 196, 196);
         }
 
-        .create-sell i{
+        .create-sell i {
             font-size: 50px;
             padding: 10px 0;
         }
-        
+
+        .resources,
+        .browse {
+            color: white;
+            padding: 30px 0;
+            margin: 0 auto;
+        }
+
+        .res-title,
+        .br-title {
+            padding: 30px 0;
+        }
+
+        .res-group,
+        .br-group {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .br-group {
+            padding: 20px 10px;
+        }
+
+        .res-card,
+        .br-card {
+            background-color: #404E67;
+        }
+
+
+        .res-card>a,
+        .br-card>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .res-card-text,
+        .br-card-text {
+            padding: 10px;
+            color: rgb(196, 196, 196);
+        }
+
 
         /* 平板橫向以上 */
         @media screen and (min-width: 1024px) {
@@ -244,28 +307,54 @@
                             MarketPlace
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">
+                            <li>
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-chess-board"></i>
-                                    <span class="category">All NFT's</span></a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fab fa-hotjar"></i>
-                                    <span class="category">NEW</span></a></li>
-                            <li><a class="dropdown-item" href="#">
+                                    <span class="category">All NFT's</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fab fa-hotjar"></i>
+                                    <span class="category">NEW</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-palette"></i>
-                                    <span class="category">Art</span></a></li>
-                            <li><a class="dropdown-item" href="#">
+                                    <span class="category">Art</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-football-ball"></i>
-                                    <span class="category">Sport</span></a></li>
-                            <li><a class="dropdown-item" href="#">
+                                    <span class="category">Sport</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-gamepad"></i>
-                                    <span class="category">Game</span></a></li>
-                            <li><a class="dropdown-item" href="#">
+                                    <span class="category">Game</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-chess-knight"></i>
-                                    <span class="category">Entertainment</span></a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fab fa-itunes-note"></i>
-                                    <span class="category">Music</span></a></li>
-                            <li><a class="dropdown-item" href="#">
+                                    <span class="category">Entertainment</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fab fa-itunes-note"></i>
+                                    <span class="category">Music</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-user-friends"></i>
-                                    <span class="category">Celibrity</span></a></li>
+                                    <span class="category">Celibrity</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
@@ -334,9 +423,9 @@
                 <div class="card header-card">
                     <img src="https://lh3.googleusercontent.com/m6dz-4JadomVQDIHHvJ2ijAjV3MVIeEcCcB7X5fQNyIXdkIkz3rHFhGxhpaCEsAFjBKOOIb4-7i07QhwawqysAl8Awjl2z5mfwB-=s250"
                         class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="header-card-body">
                         <a href="#">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="header-card-title">Card title</h5>
                         </a>
                         <p class="card-text">description here</p>
                     </div>
@@ -451,8 +540,8 @@
     <!-- create & sell -->
 
     <div class="container create-sell text-center">
+        <h2 class="c-s-title">Create and sell your NFTs</h2>
         <div class="row">
-            <h2 class="c-s-title">Create and sell your NFTs</h2>
             <div class="col-12 col-lg-3 c-s-group">
                 <div class="wallet">
                     <!-- <img class="cs-img" src="/Final Project/img/collection.svg" alt=""> -->
@@ -513,6 +602,146 @@
 
         </div>
     </div>
+
+    <!-- resources -->
+
+    <div class="container resources text-center">
+        <h2 class="res-title">Resources for getting started</h2>
+        <div class="row">
+            <div class="col-12 col-lg-4 res-group ">
+                <div class="card res-card " style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/buy-nft-safely-on-opensea-1.png" class="card-img-top" alt="...">
+                        <div class="res-card-body">
+                            <p class="res-card-text">Keeping yourself safe when buying NFTs on OpenSea</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 res-group ">
+                <div class="card res-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/creating-selling-nfts.png" class="card-img-top" alt="...">
+                        <div class="res-card-body">
+                            <p class="res-card-text">The beginner’s guide to creating & selling digital art NFTs</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 res-group ">
+                <div class="card res-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/sell-on-opensea.png" class="card-img-top" alt="...">
+                        <div class="res-card-body">
+                            <p class="res-card-text">7 reasons to sell your NFTs on OpenSea</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- browse by category -->
+
+    <div class="container browse text-center">
+        <h2 class="browse-title">Browse by category</h2>
+        <div class="row">
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/art.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">Art</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/sports.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">Sport</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/game.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">Game</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/entertainment.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">Entertainment</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/music.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">Music</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/celebrity.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">Celebrity</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/new.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">New</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 br-group">
+                <div class="card br-card" style="width: 18rem;">
+                    <a href="#">
+                        <img src="/Final_Project/img/game.png" class="card-img-top" alt="...">
+                        <div class="br-card-body">
+                            <p class="br-card-text">All</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
 
     <script>
 
