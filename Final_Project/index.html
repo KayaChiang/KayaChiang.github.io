@@ -50,6 +50,7 @@
             content: "";
             background: url(https://lootex.imgix.net/https%3A%2F%2Fwww.datocms-assets.com%2F31776%2F1626160209-tomsayers-store-coverimage.jpg?auto=format&fit=max&s=9eb1270c041334c83044f94fffca0140&w=1280);
             background-repeat: no-repeat;
+            height: 600px;
             opacity: 0.5;
             top: 0;
             left: 0;
@@ -203,6 +204,96 @@
             color: rgb(196, 196, 196);
         }
 
+        .newsletter {
+            padding: 30px 0;
+            background: rgb(51, 65, 91);
+        }
+
+        .newsletter .content {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+            /* position: relative; */
+            /* z-index: 2; */
+        }
+
+        .newsletter .content h2 {
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .newsletter .content .form-control {
+            height: 50px;
+            border-color: #ffffff;
+            border-radius: 0;
+        }
+
+        .newsletter .content.form-control:focus {
+            box-shadow: none;
+            border: 2px solid #243c4f;
+        }
+
+        .newsletter .content .btn {
+            min-height: 50px;
+            border-radius: 0;
+            background: #243c4f;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .footer {
+            padding: 30px 0;
+            background-color: #404E67;
+            color: white;
+            margin: 0 auto;
+        }
+
+        .ft-group p{
+            font-size: 13px;
+        }
+
+        .ft-group li {
+            list-style: none;
+            text-indent: -2em;
+        }
+
+        .ft-group a {
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+        }
+
+        .ft-group h3{
+            font-size: 20px;
+        }
+
+        .ft-group h4{
+            font-size: 16px;
+        }
+
+        .brand i{
+            padding-right: 10px;
+        }
+        
+        .brand p{
+            padding-right: 50px;
+        }
+
+        .contact i{
+            font-size: 20px;
+            padding-right: 8px;
+        }
+
+
+
+        .copyrigt {
+            color: rgb(199, 199, 199);
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+        }
+
+
 
         /* 平板橫向以上 */
         @media screen and (min-width: 1024px) {
@@ -272,6 +363,15 @@
             .exclusive,
             .c-s-group {
                 padding: 40px 0;
+            }
+
+            .copyrigt {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .newsletter{
+                padding-bottom: 60px;
             }
         }
 
@@ -641,7 +741,7 @@
                 </div>
             </div>
         </div>
-        
+
 
     </div>
 
@@ -738,6 +838,79 @@
         </div>
 
 
+
+    </div>
+
+    <!-- email -->
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        <h2>Subscribe to our newsletter</h2>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit">Subscribe Now</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-lg-6 ft-group">
+                    <div class="brand">
+                        <h3><i class="fas fa-anchor"></i>OpenSea</h3>
+                        <p>The world’s first and largest digital marketplace for crypto collectibles and non-fungible
+                            tokens (NFTs). Buy, sell, and discover exclusive digital assets.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-2 ft-group">
+                    <div class="explore">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Marketplace</a></li>
+                            <li><a href="#">Stats</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-2 ft-group">
+                    <div class="more">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-2 ft-group">
+                    <div class="contact">
+                        <h4>Contact us</h4>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <span class="copyrigt">@Copyright 2021 Created by BuildSchool Team 4 </span>
+
+            </div>
+
+        </div>
 
     </div>
 
