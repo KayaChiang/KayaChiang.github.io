@@ -173,13 +173,9 @@
             padding: 10px 0;
         }
 
+
         .chart i {
             font-size: 100px;
-        }
-
-        .d-content span {
-            display: flex;
-            justify-content: space-between;
         }
 
         .list-table,
@@ -256,32 +252,32 @@
             padding: 10px 0;
         }
 
-        .more{
+        .more-collection{
             padding: 30px 10px;
         }
 
-        .more h2{
+        .more-collection h2{
             color: white;
             padding-bottom: 20px;
             font-size: 20px;
         }
 
-        .more i{
+        .more-collection i{
             padding-right: 10px;
         }
 
-        .more img{
+        .more-collection img{
             width: 100px;
             display: block;
             margin: 0 auto;
         }
 
-        .more-favorite{
+        .more-collection-favorite{
             display: flex;
             justify-content: flex-end;
         }
 
-        .more-card{
+        .more-collection-card{
             padding-bottom: 20px;
         }
 
@@ -352,7 +348,7 @@
                 padding-right: 50px;
             }
 
-            .more img{
+            .more-collection img{
             width: 200px;
         }
 
@@ -474,7 +470,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-wallet"></i></a>
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
                     </li>
                 </ul>
             </div>
@@ -568,75 +564,6 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapse-price-History" aria-expanded="true"
-                                aria-controls="flush-collapse-price-History">
-                                <i class="fas fa-chart-line"></i>Price History
-                            </button>
-                        </h2>
-                        <div id="flush-collapse-price-History" class="accordion-collapse show"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-
-                                <div class="time-option">
-                                    <select name="trending" id="">
-                                        <option value="">All Time</option>
-                                        <option value="">Last 7 days</option>
-                                        <option value="">Last 14 days</option>
-                                        <option value="">Last 30 days</option>
-                                        <option value="">Last 60 days</option>
-                                        <option value="">Last 90 days</option>
-                                        <option value="">Last year</option>
-                                    </select>
-                                </div>
-
-                                <div class="chart text-center">
-                                    <i class="fas fa-chart-bar"></i>
-                                    <div>No trading data yet</div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <div class="accordion accordion-flush " id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapse-details" aria-expanded="true"
-                                aria-controls="flush-collapse-details">
-                                <i class="fas fa-book"></i>Details
-                            </button>
-                        </h2>
-                        <div id="flush-collapse-details" class="accordion-collapse show"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="d-content">
-                                    <span>
-                                        <p>Contract Address</p><a href="#">0xba30...5623</a>
-                                    </span>
-                                    <span>
-                                        <p>Token ID</p>
-                                        <p>9163</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6">
-                <div class="accordion accordion-flush " id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapse-listings" aria-expanded="true"
                                 aria-controls="flush-collapse-listings">
                                 <i class="fas fa-tag"></i>Listings
@@ -669,10 +596,48 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
+
         <div class="row">
-            <div class="div-col12 col-lg-6"></div>
+            <div class="col-12 col-lg-6">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-price-History" aria-expanded="true"
+                                aria-controls="flush-collapse-price-History">
+                                <i class="fas fa-chart-line"></i>Price History
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-price-History" class="accordion-collapse show"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <div class="time-option">
+                                    <select name="trending" id="">
+                                        <option value="">All Time</option>
+                                        <option value="">Last 7 days</option>
+                                        <option value="">Last 14 days</option>
+                                        <option value="">Last 30 days</option>
+                                        <option value="">Last 60 days</option>
+                                        <option value="">Last 90 days</option>
+                                        <option value="">Last year</option>
+                                    </select>
+                                </div>
+
+                                <div class="chart text-center">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <div>No trading data yet</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="col-12 col-lg-6">
                 <div class="accordion accordion-flush " id="accordionFlushExample">
@@ -715,6 +680,8 @@
                 </div>
             </div>
         </div>
+
+        
     </div>
 
     <!-- trading history -->
@@ -772,47 +739,7 @@
 
     <!-- more from this collection -->
 
-    <!-- <div class="container trading">
-        <div class="row ">
-            <div class="col-12 col-lg-12">
-                <div class="accordion accordion-flush " id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapse-more" aria-expanded="true"
-                                aria-controls="flush-collapse-more">
-                                <i class="fas fa-grip-horizontal"></i>More from this collection
-                            </button>
-                        </h2>
-                        <div id="flush-collapse-more" class="accordion-collapse show" aria-labelledby="flush-headingOne"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <div class="card text-center">
-                                    <div class="card-header">
-                                        Featured
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                    <div class="card-footer text-muted">
-                                        2 days ago
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div> -->
-
-    <div class="container more">
+    <div class="container more-collection">
         <div class="row">
             <h2><i class="fas fa-grip-horizontal"></i>More from this collection</h2>
             <div class="col-6 col-lg-3 more-card">
