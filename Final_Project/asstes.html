@@ -51,6 +51,27 @@
             padding: 30px 15px;
             margin: 0 auto;
             color: white;
+
+        }
+
+        .header::after {
+            content: "";
+            background: #16222A;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3A6073, #16222A);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3A6073, #16222A);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            background-size: 100%;
+            height: 600px;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
         }
 
         .product img {
@@ -88,6 +109,183 @@
             padding-right: 15px;
         }
 
+        .information {
+            padding: 30px 0;
+            color: white;
+        }
+
+        .accordion-button {
+            background-color: #2B3954;
+            color: white;
+        }
+
+        .accordion-button:focus {
+            background-color: #2B3954;
+            border-color: #2B3954;
+            color: white;
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            background-color: #2B3954;
+        }
+
+        .accordion-item {
+            background-color: #2B3954;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: white;
+            background-color: #2B3954;
+            box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+        }
+
+        .accordion-flush i {
+            padding-right: 10px;
+        }
+
+        .accordion-flush {
+            padding: 20px 0;
+        }
+
+        .created {
+            display: flex;
+            color: white;
+            font-size: 13px;
+        }
+
+        .created img {
+            border-radius: 50%;
+            width: 20px;
+        }
+
+        .created p {
+            padding-left: 10px;
+            position: relative;
+            margin: auto 0;
+        }
+
+        .about-creator {
+            padding: 10px 0;
+        }
+
+        .properties {
+            padding: 10px 0;
+        }
+
+        .chart i {
+            font-size: 100px;
+        }
+
+        .d-content span {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list-table,
+        .offers-table,
+        .trading-table {
+            color: white;
+            font-size: 12px;
+        }
+
+        .list-table button {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .trading-table img {
+            border-radius: 50%;
+            width: 20px;
+        }
+
+
+        .trading .col-12 {
+            padding: 0;
+        }
+
+        .footer {
+            padding: 30px 0;
+            background-color: #404E67;
+            color: white;
+            margin: 0 auto;
+        }
+
+        .ft-group {
+            text-align: center;
+        }
+
+        .ft-group p {
+            font-size: 13px;
+            color: #BEC3CD;
+        }
+
+        .ft-group li {
+            list-style: none;
+            text-indent: -2em;
+        }
+
+        .ft-group a {
+            text-decoration: none;
+            color: #BEC3CD;
+            font-size: 13px;
+        }
+
+        .ft-group h3 {
+            font-size: 20px;
+        }
+
+        .ft-group h4 {
+            font-size: 16px;
+        }
+
+        .brand i {
+            padding-right: 10px;
+        }
+
+        .contact i {
+            font-size: 20px;
+            padding-right: 8px;
+        }
+
+        .copyrigt {
+            color: rgb(199, 199, 199);
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .more{
+            padding: 30px 10px;
+        }
+
+        .more h2{
+            color: white;
+            padding-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .more i{
+            padding-right: 10px;
+        }
+
+        .more img{
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .more-favorite{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .more-card{
+            padding-bottom: 20px;
+        }
+
+
         @media screen and (min-width: 1024px) {
 
             .navbar-collapse {
@@ -119,7 +317,7 @@
                 display: flex;
             }
 
-            .owner p:first-child{
+            .owner p:first-child {
                 margin-bottom: 0;
             }
 
@@ -130,8 +328,33 @@
 
             .popular p {
                 margin-bottom: 0;
+                position: relative;
+                top: -5px;
             }
 
+            .list-table,
+            .offers-table,
+            .trading-table {
+                font-size: 16px;
+            }
+
+            .copyrigt {
+                display: flex;
+                justify-content: flex-start;
+                padding-left: 5px;
+            }
+
+            .ft-group {
+                text-align: left;
+            }
+
+            .brand p {
+                padding-right: 50px;
+            }
+
+            .more img{
+            width: 200px;
+        }
 
 
         }
@@ -159,7 +382,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="true">
                             MarketPlace
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -298,6 +521,426 @@
         </div>
 
     </div>
+
+    <!-- accordion-information -->
+    <div class="container information">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-description" aria-expanded="true"
+                                aria-controls="flush-collapse-description">
+                                <i class="fas fa-align-justify"></i>Description
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-description" class="accordion-collapse show"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="created">
+                                    <img src="/Final_Project/img/creator.png" alt="">
+                                    <p>Created by
+                                        <a href="#">BoredApeKennelClub</a>
+                                    </p>
+                                </div>
+
+                                <div class="about-creator">The Doge Pound is 10,000 art pieces carefully chosen by
+                                    Professor Elon. A unique digital collection of diverse NFTs lying on Ethereum
+                                    Blockchain. Each one is thoughtfully designed, specifically picked, and impeccably
+                                    shaped.</div>
+
+                                <div class="properties">
+                                    <button type="button" class="btn btn-dark">Ninja Kunai</button>
+                                    <button type="button" class="btn btn-dark">Sunglasses</button>
+                                    <button type="button" class="btn btn-dark">Black</button>
+                                    <button type="button" class="btn btn-dark">Happy</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-price-History" aria-expanded="true"
+                                aria-controls="flush-collapse-price-History">
+                                <i class="fas fa-chart-line"></i>Price History
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-price-History" class="accordion-collapse show"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <div class="time-option">
+                                    <select name="trending" id="">
+                                        <option value="">All Time</option>
+                                        <option value="">Last 7 days</option>
+                                        <option value="">Last 14 days</option>
+                                        <option value="">Last 30 days</option>
+                                        <option value="">Last 60 days</option>
+                                        <option value="">Last 90 days</option>
+                                        <option value="">Last year</option>
+                                    </select>
+                                </div>
+
+                                <div class="chart text-center">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <div>No trading data yet</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-details" aria-expanded="true"
+                                aria-controls="flush-collapse-details">
+                                <i class="fas fa-book"></i>Details
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-details" class="accordion-collapse show"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="d-content">
+                                    <span>
+                                        <p>Contract Address</p><a href="#">0xba30...5623</a>
+                                    </span>
+                                    <span>
+                                        <p>Token ID</p>
+                                        <p>9163</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-listings" aria-expanded="true"
+                                aria-controls="flush-collapse-listings">
+                                <i class="fas fa-tag"></i>Listings
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-listings" class="accordion-collapse show"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <table class="table list-table text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Price</th>
+                                            <th scope="col"> </th>
+                                            <th scope="col">Expiration</th>
+                                            <th scope="col">From</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>$ 4166.85</th>
+                                            <td><button type="button" class="btn btn-light btn-sm ">Buy ></button></td>
+                                            <td>-</td>
+                                            <td><a href="#">Truekon</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="div-col12 col-lg-6"></div>
+
+            <div class="col-12 col-lg-6">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-offers" aria-expanded="true"
+                                aria-controls="flush-collapse-offers">
+                                <i class="fas fa-list"></i>Offers
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-offers" class="accordion-collapse show"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <table class="table offers-table text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Expiration</th>
+                                            <th scope="col">From</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>$ 4166.85</th>
+                                            <td>in 17 hours</td>
+                                            <td><a href="#">Lady_Gagaa</a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>$ 1773.24</th>
+                                            <td>in 2 days</td>
+                                            <td><a href="#">91F30D</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- trading history -->
+
+    <div class="container trading">
+        <div class="row ">
+            <div class="col-12 col-lg-12">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-trading" aria-expanded="true"
+                                aria-controls="flush-collapse-trading">
+                                <i class="fas fa-exchange-alt"></i>Trading History
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-trading" class="accordion-collapse show"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <table class="table trading-table text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Event</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">From</th>
+                                            <th scope="col">To</th>
+                                            <th scope="col">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Offer</td>
+                                            <td> </td>
+                                            <td><a href="#"><img src="/Final_Project/img/from.png"
+                                                        alt="">NullAddress</a>
+                                            </td>
+                                            <td><a href="#"><img src="/Final_Project/img/to.jpg" alt="">
+                                                    Chagz</a></td>
+                                            <td><a href="#">a month ago <i class="fas fa-external-link-alt"></i></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- more from this collection -->
+
+    <!-- <div class="container trading">
+        <div class="row ">
+            <div class="col-12 col-lg-12">
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-more" aria-expanded="true"
+                                aria-controls="flush-collapse-more">
+                                <i class="fas fa-grip-horizontal"></i>More from this collection
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-more" class="accordion-collapse show" aria-labelledby="flush-headingOne"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        Featured
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Special title treatment</h5>
+                                        <p class="card-text">With supporting text below as a natural lead-in to
+                                            additional content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        2 days ago
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div> -->
+
+    <div class="container more">
+        <div class="row">
+            <h2><i class="fas fa-grip-horizontal"></i>More from this collection</h2>
+            <div class="col-6 col-lg-3 more-card">
+                <div class="card">
+                    <div class="card-header more-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="card-body text-muted">
+                        <img src="/Final_Project/img/fake-1.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-title">Bored Ape Kennel Club</h5>
+                        <p class="card-text">1522</p>
+                        <p class="card-price text-end">price $10</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <div class="card-header more-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="card-body text-muted">
+                        <img src="/Final_Project/img/fake-1.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-title">Bored Ape Kennel Club</h5>
+                        <p class="card-text">1522</p>
+                        <p class="card-price text-end">price $10</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <div class="card-header more-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="card-body text-muted">
+                        <img src="/Final_Project/img/fake-1.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-title">Bored Ape Kennel Club</h5>
+                        <p class="card-text">1522</p>
+                        <p class="card-price text-end">price $10</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="card">
+                    <div class="card-header more-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="card-body text-muted">
+                        <img src="/Final_Project/img/fake-1.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-title">Bored Ape Kennel Club</h5>
+                        <p class="card-text">1522</p>
+                        <p class="card-price text-end">price $10</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-lg-6 ft-group">
+                    <div class="brand">
+                        <h3><i class="fas fa-anchor"></i>OpenSea</h3>
+                        <p>The world’s first and largest digital marketplace for crypto collectibles and non-fungible
+                            tokens (NFTs). Buy, sell, and discover exclusive digital assets.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-2 ft-group">
+                    <div class="explore">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Marketplace</a></li>
+                            <li><a href="#">Stats</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-2 ft-group">
+                    <div class="more">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-2 ft-group">
+                    <div class="contact">
+                        <h4>Contact us</h4>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <span class="copyrigt">@Copyright 2021 Created by BuildSchool Team 4 </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script>
